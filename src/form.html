@@ -13,138 +13,156 @@
 			<nav class="main-nav">
 				<span id="menu_trigger" class="hamburger"></span>
 				<ul class="main-nav__list">
-					<li class="main-nav__item"><a href="" class="main-nav__link"></a></li>
+					<li class="main-nav__item"><a href="" class="main-nav__link">Номера</a></li>
+					<li class="main-nav__item"><a href="" class="main-nav__link">Коттедж</a></li>
+					<li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
+					<li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
+					<li class="main-nav__item"><a href="" class="main-nav__link">Контакты</a></li>
 				</ul>
 			</nav>
-			<div class="page-header__contacts"><strong></strong></div>
-			<a href="" class="btn btn--icon-calendar"></a>
+			<div class="page-header__contacts"><strong>+7 812 777-55-88</strong>г.Санкт-Петербург, Приморское ш.600</div>
+			<a href="" class="btn btn--icon-calendar">Забронировать</a>
 		</div>
 	</header>
 
 
 	<section class="reservation">
-		<h2></h2>
-		<p><strong></strong></p>
+		<h1>Бронирование</h1>
+		<p>Чтобы забронировать номер в отеле или коттедж, заолните форму ниже или просто позвоните по телефону: <strong>+7 812 777 55 88</strong></p>
 	</section>
 
 
-	<section class="period-choice">
-		<div class="step"></div>				<!-- тэг header? -->
-		<h2 class="period-choice__title"></h2>
-		<div class="period-choice__inner">
-			<div class="date  date--active">
-				<h3 class="date__title"></h3>
-				<div class="date__figures"></div>
-			</div>
-			<div class="date">
-				<h3 class="date__title  date__title--outcome"></h3>
-				<div class="date__figures"></div>
-			</div>
+	<section class="dates">
+		<span class="step">Шаг 1</span>				<!-- использовать тэг header? -->
+		<h2 class="dates__title">Дата отдыха</h2>
+		<div class="dates__inner">    	<!-- возможно не требуется, сразу form -->	
+			<form action="">
+				<label for="date-arrival">Дата въезда</label>		<!-- нужны ли обертки каждому столбцу? -->
+				<input type="date" id="date-arrival">				<!-- как задать для input модификатор active если у него нет класса? -->
+				<label for="date-departure">Дата выезда</label>		
+				<input type="date" id="date-departure">				
+			</form>
 		</div>
 	</section>
 
 
-	<section class="accomodation-choice">
-		<div class="step"></div>
-		<h2 class="accomodation-choice__title"></h2>
-		<div class="accomodation-choice__inner">
-			<div class="living-place__item  living-place__item--active"></div>
-			<div class="living-place__item"></div>
+	<section class="residence">
+		<span class="step">Шаг 2</span>
+		<h2 class="residence__title">Место проживания</h2>
+		<div class="residence__inner">
+			<form action="">						<!-- или через тэг а? как связать эту форму с формой в следующем шаге? -->
+				<label for="hotel">Отель</label>		<!-- нужны ли обертки каждому столбцу? -->
+				<input type="image" id="hotel">				<!-- как задать для input класс active если у него нет класса? -->
+				<label for="cottage">Коттедж</label>		
+				<input type="image" id="cottage">				
+			</form>
 		</div>
 	</section>
 
 
 	<!-- также наверно нужен блок для типов номеров отеля -->
 	<section class="cottages">
-		<div class="step"></div>
-		<h2 class="cottages__title"></h2>
-		<ul class="cottages__list">
-			<li class="cottages__item  cottages__item--active"></li>
-			<li class="cottages__item"></li>
-			<li class="cottages__item"></li>
-			<li class="cottages__item"></li>
+		<span class="step">Шаг 3</span>
+		<h2 class="cottages__title">Тип коттеджа</h2>
+		<ul class="cottages__list">										<!-- FORM??? -->
+			<li class="cottages__item"><a href="">Флагман</a></li>
+			<li class="cottages__item"><a href="">Озерный</a></li>
+			<li class="cottages__item"><a href="">Ольховка</a></li>
+			<li class="cottages__item"><a href="">Портовый</a></li>
 		</ul>
 		<div class="cottage-description">
 			<ul class="cottage-description__list">
-				<li class="cottage-description__item"></li>
-				<li class="cottage-description__item"></li>
-				<li class="cottage-description__item"></li>
-				<li class="cottage-description__item"></li>
+				<li class="cottage-description__item"><img src="" alt="">Площадь 100м<sup>2</sup></li>
+				<li class="cottage-description__item"><img src="" alt="">3 комнаты</li>
+				<li class="cottage-description__item"><img src="" alt="">5 спальных мест</li>
+				<li class="cottage-description__item"><img src="" alt="">Раздельный санузел</li>
+				<li class="cottage-description__item"><img src="" alt="">Wi-fi</li>				
 			</ul>
 		</div>
 	</section>
 
 
-	<section class="person-choice">
-		<div class="step"></div>
-		<h2 class="person-choice__title"></h2>
-		<ul class="person-choice__list">             	<!-- или div? -->
-			<form>
-				<li><input type="text"></li>
-				<li><input type="tel"></li>
-				<li class="tel-clarify"></li>
-				<li><input type="text"></li>
-				<li><input type="email"></li>
-				<li class="email-clarify"></li>
+	<section class="client">
+		<span class="step">Шаг 4</span>
+		<h2 class="client__title">Персональная информация</h2>
+		<div class="client__inner">
+			<form action="">
+				<input type="text" name="name" value="Имя">
+				<input type="tel" name="telephone" id="client-telephone" value="Номер телефона">
+				<label for="client-telephone">Мы свяжемся с вами в случае необходимости.</label>
+				<input type="text" name="surname" value="Фамилия">
+				<input type="email" name="email" id="client-email" value="E-mail">
+				<label for="client-email">На этот адрес мы вышлем вам подтверждение о забронированном номере.</label>
 			</form>
-		</ul>
+		</div>
 	</section>
 
 
 	<section class="payment">
-		<div class="step"></div>
-		<h3 class="payment__title"></h3>
-		<div class="payment__inner">              	<!-- или ul-li? -->
-			<div class="amount">
-				<h3></h3>
-				<div class="cost"></div>
-				<div class="amount__annotation"></div>
+		<div class="step">Шаг 5</div>
+		<h2 class="payment__title">Способ оплаты</h2>
+		<form action="">		
+			<div class="payment__inner">
+				<div class="bill">
+					<h3>К оплате</h3>
+					<div class="charge"></div>
+					<div class="charge  charge--false">-</div>				
+					<div class="bill__annotation"></div>
+					<div class="bill__annotation  bill__annotation--false">Пожалуйста, выберите дату въезда и выезда, чтобы увидеть сумму к оплате.</div>				
+				</div>
+				<div class="pay-later">
+					<label for="later">
+						<input type="checkbox" name="pay-later" id="later">
+						<h4 class="pay-later__title">По приезду</h4>
+						<p class="pay-later__annotation">Вы можете произвести оплату по факту заселения</p>
+					</label>	
+				</div>
+				<div class="pay-now">
+					<label for="now">
+						<input type="checkbox" name="pay-now" id="now" checked>				
+						<h4 class="pay-now__title">Сейчас</h4>
+						<p class="pay-now__annotation">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</p>
+						<fieldset>	
+							<div class="card-number">				<!-- нужно ли оборачивать label+input в div? -->
+								<label for="card-number">Номер карты</label>
+								<input type="number" name="card-number" id="card-number" value="0000-0000-0000-0000">
+							</div>	
+							<div class="cvv-code">
+								<label for="cvv-code">Код CVV</label>
+								<input type="number" name="cvv-code" id="cvv-code" value="123">
+							</div>
+							<div class="card-holder">
+								<label for="card-holder">Фамилия владельца карты</label>
+								<input type="text" name="card-holder" id="card-holder" value="Vladimir Vladimirov">
+							</div>
+							<div class="valid-until">
+								<label for="valid-until">Действует до</label>
+								<input type="number" name="valid-until" id="valid-until" value="01/2018">
+							</div>
+						</fieldset>
+					</label>					
+				</div>
 			</div>
-			<div class="pay-later">
-				<h4 class="pay-later__title"></h4>
-				<p class="pay-later__annotation"></p>
-			</div>
-			<div class="pay-now">
-				<h4 class="pay-now__title"></h4>
-				<p class="pay-now__annotation"></p>
-				<section class="pay-card">
-					<div class="card-number">
-						<h5></h5>
-						<input type="number">
-					</div>
-					<div class="cvv-code">
-						<h5></h5>
-						<input type="number">
-					</div>
-					<div class="card-holder">
-						<h5></h5>
-						<input type="text">
-					</div>
-					<div class="valid-until">
-						<h5></h5>
-						<input type="number">
-					</div>
-				</section>
-			</div>
-		</div>
-		<button class="to-reserve"></button>
+			<button class="to-reserve">Забронировать</button>
+		</form>
 	</section>
 
 
 	<footer class="page-footer">
 		<div class="page-footer__inner">
-			<div class="page-footer__address"></div>
+			<div class="page-footer__address">г.Санкт-Петербург Приморское ш. 600</div>
 			<div class="page-footer__links">
-				<a href="" class="logo"><img src="" alt=""></a>
+				<a href="" class="logo" style="background-image: url();"></a>
 				<ul class="social-media">
-					<li></li>
-					<li></li>
-					<li></li>
+					<li class="social-media__item"><a href="" style="background-image: url();"></a></li>
+					<li class="social-media__item"><a href="" style="background-image: url();"></a></li>
+					<li class="social-media__item"><a href="" style="background-image: url();"></a></li>
 				</ul>
 			</div>
-			<div class="page-footer_contacts"></div>
+			<div class="page-footer_contacts">+7 812 777-55-88 info@greenvalley.ru</div>
 		</div>
 	</footer>
+
 
 
 </body>
