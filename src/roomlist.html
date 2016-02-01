@@ -3,17 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Номера в отеле</title>
+	<link href='https://fonts.googleapis.com/css?family=PT+Serif+Caption|Fira+Sans:400,500|PT+Sans+Caption:400,700|PT+Serif:400,700' rel='stylesheet'>
+	<link rel="stylesheet" href="css/style.css">	
 </head>
 <body>
 
 
 	<header class="page-header">
 		<div class="page-header__inner">
-			<a href="" class="logo"><img src="" alt=""></a>
+			<a href="" class="logo"  style="background-image: url(img/header-logo.png);"></a>
 			<nav class="main-nav">
 				<span id="menu_trigger" class="hamburger"></span>
 				<ul class="main-nav__list">
-					<li class="main-nav__item"><a href="" class="main-nav__link">Номера</a></li>
+					<li class="main-nav__item"><a href="" class="main-nav__link  main-nav__link--chosen">Номера</a></li>
 					<li class="main-nav__item"><a href="" class="main-nav__link">Коттедж</a></li>
 					<li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
 					<li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
@@ -26,33 +28,31 @@
 	</header>
 
 
-	<section class="page-banner">							<!-- <header class="rooms-header"> ?? -->
-		<h1 class="page-banner__title">Номера в отеле Green Valley</h1>	<!-- можно без класса, т.к. вряд ли будет меняться -->
-		<p class="page-banner__text">Комфорт и живописный вид на Финский залив и сосновый парк.</p>
-		<p class="page-banner__text">4 этажа | 70 номеров</p>		<!-- можно без класса, т.к. вряд ли будет меняться -->
+	<section class="rooms-banner"  style="background-image: url(img/roomlist-header.jpg);">
+		<h1 class="rooms-banner__title">Номера в отеле Green Valley</h1>	
+		<p class="rooms-banner__text">Комфорт и живописный вид на Финский залив и сосновый парк.</p>
+		<p class="rooms-banner__text">4 этажа | 70 номеров</p>
 	</section>
 
 
 	<section class="rooms">
 		<h2 class="rooms__title">Категории</h2>
 		<ul class="rooms__list">
-			<li>
-				<div class="roomtype">
-					<img src="" alt="" class="room-pic">
-					<div class="roomtype__info-wrapper">
-						<header class="room-name">
-							<h3>Эконом</h3>
-							<span class="price-per-night">от <strong>3400</strong> руб./сутки</span>
-						</header>
-						<p class="room-short-description">В отеле 30 таких номеров площадью от 16 до 20 кв.м. Рассчитаны на проживание 1-2 человек. Часть номеров с видом на Финский залив. </p>
-						<a href="" class="btn">Забронировать</a>
-						<a href="" class="details">Подробнее</a>
-					</div>
+			<li class="rooms__item">
+				<img src="img/roomlist-econom.jpg" alt="">
+				<div class="rooms__info-wrapper">
+					<header class="room-type">
+						<h3>Эконом</h3>
+						<span class="price-per-night">от <strong>3400</strong> руб./сутки</span>
+					</header>
+					<p class="room-short-description">В отеле 30 таких номеров площадью от 16 до 20 кв.м. Рассчитаны на проживание 1-2 человек. Часть номеров с видом на Финский залив. </p>
+					<a href="" class="btn">Забронировать</a>
+					<a href="single-room.html" class="details">Подробнее</a>
 				</div>
 			</li>
-			<li></li>
-			<li></li>
-			<li></li>
+			<li class="rooms__item"></li>
+			<li class="rooms__item"></li>
+			<li class="rooms__item"></li>
 		</ul>
 	</section>
 
@@ -61,11 +61,11 @@
 		<div class="page-footer__inner">
 			<div class="page-footer__address">г.Санкт-Петербург Приморское ш. 600</div>
 			<div class="page-footer__links">
-				<a href="" class="logo" style="background-image: url();"></a>
+				<a href="" class="logo" style="background-image: url(img/footer-logo.png);"></a>
 				<ul class="social-media">
-					<li class="social-media__item"><a href="" style="background-image: url();"></a></li>
-					<li class="social-media__item"><a href="" style="background-image: url();"></a></li>
-					<li class="social-media__item"><a href="" style="background-image: url();"></a></li>
+					<li class="social-media__item"><a href="" style="background-image: url(img/footer-vk-green.png);"></a></li>
+					<li class="social-media__item"><a href="" style="background-image: url(img/footer-in-green.png);"></a></li>
+					<li class="social-media__item"><a href="" style="background-image: url(img/footer-fb-green.png);"></a></li>
 				</ul>
 			</div>
 			<div class="page-footer_contacts">+7 812 777-55-88 info@greenvalley.ru</div>

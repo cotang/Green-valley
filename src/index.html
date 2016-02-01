@@ -3,17 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Green valley</title>
+	<link href='https://fonts.googleapis.com/css?family=PT+Serif+Caption|Fira+Sans:400,500|PT+Sans+Caption:400,700|PT+Serif:400,700' rel='stylesheet'>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 
 	<header class="page-header">
 		<div class="page-header__inner">
-			<a href="" class="logo"  style="background-image: url();"></a>
+			<a href="" class="logo"  style="background-image: url(img/header-logo.png);"></a>
 			<nav class="main-nav">
 				<span id="menu_trigger" class="hamburger"></span>
 				<ul class="main-nav__list">
-					<li class="main-nav__item"><a href="" class="main-nav__link">Комнаты</a></li>
+					<li class="main-nav__item"><a href="roomlist.html" class="main-nav__link">Номера</a></li>
 					<li class="main-nav__item"><a href="" class="main-nav__link">Коттедж</a></li>
 					<li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
 					<li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
@@ -28,7 +30,7 @@
 
 	<section class="promo">
 		<div class="promo__wrapper-slides">
-			<div class="promo__slide  promo__slide--active"  style="background-image: url();">
+			<div class="promo__slide  promo__slide--active"  style="background-image: url(img/slider.jpg);">
 				<div class="promo__slide-inner">
 					<h1 class="promo__slide-title">Семейный отдых на берегу Финского залива</h1>
 					<p class="promo__slide-description">Green valley - это современная база отдыха в курортном районе для здорового отдыха всей семьей</p>
@@ -54,39 +56,43 @@
 			<p>Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте семейный пикник с шашлыками или снимите напряжение в бане или спа. Почувствуйте отдых!</p>
 		</div>
 		<ul class="relax__features">
-			<li style="background-image:url();">Бассейн</li>
-			<li style="background-image:url();">Спортивная площадка</li>
-			<li style="background-image:url();">Бильярд</li>
-			<li style="background-image:url();">Спа</li>
-			<li style="background-image:url();">Бани</li>
-			<li style="background-image:url();">Анимация</li>
+			<li style="background-image:url(img/pool-xxx.jpg);">Бассейн</li>
+			<li style="background-image:url(img/pool-xxx.jpg);">Спортивная площадка</li>
+			<li style="background-image:url(img/pool-xxx.jpg);">Бильярд</li>
+			<li style="background-image:url(img/pool-xxx.jpg);">Спа</li>
+			<li style="background-image:url(img/pool-xxx.jpg);">Бани</li>
+			<li style="background-image:url(img/pool-xxx.jpg);">Анимация</li>
 		</ul>
 	</section>
 
 
-	<section class="gallery"></section>
+	<section class="gallery">
+		<div class="gallery__inner"></div>
+	</section>
 
 
 	<section class="review">
-		<div class="review__inner">
+		<div class="review__inner">		<!-- зачем нужен? -->
 			<h2 class="review__title">Отзывы</h2>
-			<div class="review__carousel">					<!-- блок со стрелками вправо-влево? -->	
+			<div class="review__carousel">	
 				<blockquote class="review__slide">Наша семья счастлива, что открыла для себя Green Valley. Замечательный, комфортный отдых. Хорошее место, приветливый персонал, вкусная еда. Стали постоянными гостями!
-					<footer class="review__slide-footer">
-						<div class="review__date">Дата отдыха:</br></div>
-						<div class="review__author"><img src="" alt="">Екатерина В.
+					<footer class="review__slide-footer">  		<!-- только для логической группировки? -->
+						<div class="review__date">Дата отдыха:</br>01.06.2015-08.06.2015</div>
+						<div class="review__author"><img src="img/review01.jpg" alt="">Екатерина В.
 								<div class="review__social-links"><a href=""></a></div>
 							</div>
 					</footer>
-				</blockquote>
-				<blockquote class="review__slide">Спасибо всем без исключения сотрудникам отеля за прекрасные дни, проведённые у вас! Наслаждались тишиной, отдохнули прекрасно. Понравилось всё: тёплый приём персоналом.
+				</blockquote     
+				><blockquote class="review__slide">Спасибо всем без исключения сотрудникам отеля за прекрасные дни, проведённые у вас! Наслаждались тишиной, отдохнули прекрасно. Понравилось всё: тёплый приём персоналом.
 					<footer class="review__slide-footer">
-						<div class="review__date">Дата отдыха:</br></div>
-						<div class="review__author"><img src="" alt="">Екатерина В.
+						<div class="review__date">Дата отдыха:</br>15.05.2015-20.05.2015</div>
+						<div class="review__author"><img src="img/review02.jpg" alt="">Екатерина В.
 								<div class="review__social-links"><a href=""></a></div>
 							</div>
 					</footer>
-				</blockquote>				
+				</blockquote
+				><a href="" class="arrow-left"></a>		<!-- блок со стрелками вправо-влево? -->
+				<a href="" class="arrow-right"></a>			
 			</div>
 			<a href="" class="btn btn--bordered">Все отзывы</a>
 		</div>
@@ -94,12 +100,12 @@
 
 
 	<section class="offer">
-		<h2 class="offer__title">акции и предложения</h2>
+		<h2 class="offer__title">Акции и предложения</h2>
 		<div class="offer__wrapper-slides">
-			<div class="offer__slide  offer__slide--active" style="background-image:url();">
+			<div class="offer__slide  offer__slide--active" style="background-image:url(img/offers.jpg);">
 				<div class="offer__slide-text"><strong>Скидки в мае</strong>Забронируйте номер или коттедж любой категории до 31 июня и получите скидку 10% !</div>
 			</div>
-			<div class="offer__slide" style="background-image:url();">
+			<div class="offer__slide" style="background-image:url(img/offers.jpg);">
 				<div class="offer__slide-text"><strong>Скидки в июне</strong>Забронируйте номер или коттедж любой категории до 31 июля и получите скидку 5% !</div>
 			</div>
 		</div>
@@ -114,15 +120,15 @@
 		<h2 class="location__title">Как до нас добраться</h2>
 		<div class="location__map"></div>
 		<div class="location__transport">
-			<div style="background-image:url();"></div>
-			<strong>Автобусы</strong>					<!-- или лучше один параграф p, и переносы с помощью br -->
+			<div style="background-image:url(img/location-bus.png);"></div>
+			<strong>Автобусы</strong>			<!-- или лучше один параграф p, и переносы с помощью br -->
 			</p><b>№ 211</b> от станции метро «Черная речка» до остановки «Санаторий Репино»</p>
 			</p><b>№ 305К</b> от станции метро «Старая деревня»</p>
 			</p><b>№ 680К</b> от станции метро «Проспект Просвещения»</p>
 			</p><b>№ 400К</b> от станции метро «Площадь Ленина»</p>
 		</div>
 		<div class="location__transport">
-			<div style="background-image:url();"></div>
+			<div style="background-image:url(img/location-train.png);"></div>
 			<strong>Электропоезд</strong>
 			</p>Электропоезд Выборгского направления от Финляндского вокзала Санкт-Петербурга до платформы «Репино»</p>
 		</div>
@@ -132,16 +138,16 @@
 	<section class="accomodation">
 		<div class="accomodation__inner">
 			<h2 class="accomodation__title">Где вы хотите отдохнуть?</h2>
-			<div class="accomodation__type">
-				<div style="background-image:url();"></div>
+			<a href="" class="accomodation__type">
+				<div style="background-image:url(img/accomodation-hotel.jpg);"></div>
 				<h3>В отеле</h3>
-				от<strong>4000</strong>руб./сутки
-			</div>
-			<div class="accomodation__type">
-				<div style="background-image:url();"></div>
+				от <strong>4000</strong> руб./сутки
+			</a>
+			<a href="" class="accomodation__type">
+				<div style="background-image:url(img/accomodation-cottage.jpg);"></div>
 				<h3>В коттедже</h3>
-				от<strong>6800</strong>руб./сутки
-			</div>
+				от <strong>6800</strong> руб./сутки
+			</a>
 		</div>
 	</section>
 
@@ -150,11 +156,11 @@
 		<div class="page-footer__inner">
 			<div class="page-footer__address">г.Санкт-Петербург Приморское ш. 600</div>
 			<div class="page-footer__links">
-				<a href="" class="logo" style="background-image: url();"></a>
+				<a href="" class="logo" style="background-image: url(img/footer-logo.png);"></a>
 				<ul class="social-media">
-					<li class="social-media__item"><a href="" style="background-image: url();"></a></li>
-					<li class="social-media__item"><a href="" style="background-image: url();"></a></li>
-					<li class="social-media__item"><a href="" style="background-image: url();"></a></li>
+					<li class="social-media__item"><a href="" style="background-image: url(img/footer-vk-green.png);"></a></li>
+					<li class="social-media__item"><a href="" style="background-image: url(img/footer-in-green.png);"></a></li>
+					<li class="social-media__item"><a href="" style="background-image: url(img/footer-fb-green.png);"></a></li>
 				</ul>
 			</div>
 			<div class="page-footer_contacts">+7 812 777-55-88 info@greenvalley</div>

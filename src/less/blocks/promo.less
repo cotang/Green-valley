@@ -1,0 +1,94 @@
+@promo__slide-height:             431px;
+@promo__tabs-height:       112px;
+
+.promo{
+	width: @large-width;
+	height: @promo__slide-height + @promo__tabs-height;
+	margin: @margin-centering;
+//	background: red;
+//	font-family: @fira-sans;	
+//	letter-spacing: @letter-spacing-50;	
+//	font: @font-menu; /* шрифт! */	
+
+}
+.promo__wrapper-slides{
+	height: @promo__slide-height;
+	width: 100%;
+}
+.promo__slide{
+	display: none;
+//	height: 100%;
+}
+.promo__slide--active{
+	display: block;
+	height: 100%;
+}
+.promo__slide-inner{
+	width: 650px;
+	padding-top: 90px;
+	padding-left: 100px;
+}
+.promo__slide-title{
+	display: block; /* если оба inline то нужен <br> между ними */
+	margin: 0;
+	padding-left: 5px;
+	font: @font-h1;
+	font-family: @pt-serif-caption;
+	letter-spacing: @letter-spacing-15;
+	background: #fff;
+	margin-bottom: 24px;
+}
+.promo__slide-description{
+	display: block;	/* если оба inline то нужен <br> между ними */
+	margin: 0;
+	padding-left: 10px;	
+	font: @font-accent;
+	font-family: @fira-sans;
+	background: #fff;
+//	margin-top: 50px;
+}
+.promo__tabs{
+	height: @promo__tabs-height;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+//	background-color: red;
+	line-height: @promo__tabs-height; 
+}
+.promo__tab{
+	display: inline-block;
+	vertical-align: middle;
+	text-transform: uppercase;
+	font: @font-small;
+	font-family: @fira-sans;
+	letter-spacing: @letter-spacing-50;	
+	margin-top: -15px;
+	margin-right: 40px;	
+	&:last-child {
+		margin-right: 0;
+	}
+	& a:hover{
+		color: @light-orange;
+		&:after{
+			content: '';
+			display: block;
+			margin: @margin-centering;
+			border-bottom: 2px solid @light-orange;
+			width: 30px;
+			margin-top: -1px;	/* костыль */						
+		}
+	}
+}
+.promo__tab--active{
+	 a{
+		color: @light-orange;
+		&:after{
+			content: '';
+			display: block;
+			margin: @margin-centering;
+			border-bottom: 2px solid @light-orange;
+			width: 30px;
+			margin-top: -1px;	/* костыль */		
+		}
+	}
+}
