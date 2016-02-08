@@ -1,34 +1,21 @@
-@button-height:             37px;
+//@button-height:             37px;
 
 .btn{
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
-	width: 181px;
-	height: @button-height;
-	line-height: @button-height;
-	padding: 0;
+	padding: 8px 18px;
 	background-color: @light-orange;
-	border-radius: 16px;
-	font: @font-small;
+	border-radius: 20px;
+	font-size: @font-small;
 	font-family: @fira-sans;
 	font-weight: @font-weight-medium;		
 	letter-spacing: @letter-spacing-50;	
 	color: @white;
 	text-transform: uppercase;	
-
 	&:hover{
 		background-color: @dark-orange;	
 		color: @white;	
-	}
-}
-.btn--bordered{
-	width: 146px;
-	background-color: transparent;
-	border: 2px solid @white;
-	&:hover{
-		background-color: @white;	
-		color: @green;	
 	}
 }
 .btn--icon-calendar:before{
@@ -37,26 +24,54 @@
 	background-image: url(../img/calendar-icon.png);
 	width: 13px;
 	height: 14px;
-	position: relative;
-	right: 10px;
+	margin-right: 10px;
 }
+.btn--bordered{
+	padding: 6px 25px;
+	background-color: transparent;
+	border: 2px solid @white;
+	&:hover{
+		background-color: @white;	
+		color: @green;	
+	}
+}
+
+
 .details{
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
-	width: 181px;
-	height: @button-height;
-	line-height: @button-height;
 	padding: 0;
-	font: @font-small;
+	font-size: @font-small;
 	font-family: @fira-sans;
 	font-weight: @font-weight-medium;		
 	letter-spacing: @letter-spacing-50;	
 	text-transform: uppercase;	
 	border-bottom: 1px dashed @black;
-//	padding-bottom: 5px;
 	&:hover{
 		border-bottom: none;	
 		color: inherit;
 	}
 }
+
+.arrow-left{
+	display: block;
+	transform: rotate(-45deg)  translateY(-50%);
+	border-top: 2px solid white;
+	border-left: 2px solid white;
+	width: 25px;
+	height: 25px;
+	position: absolute;	
+	top: 50%;
+}
+.arrow-right{
+	display: block;
+	transform: rotate(45deg)  translateY(-50%);
+	border-top: 2px solid white;
+	border-right: 2px solid white;
+	width: 25px;
+	height: 25px;
+	position: absolute;	
+	top: 50%;
+}
+

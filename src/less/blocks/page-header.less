@@ -1,76 +1,158 @@
-@header-height:             90px;
 
 .page-header{
-	width: @large-width;
-	height: @header-height;
-	margin: @margin-centering;
-	font-family: @fira-sans;	
-	letter-spacing: @letter-spacing-50;	
-	font: @font-menu; /* шрифт! */	
+	width: 100%;
 }
-
 .page-header__inner{
-	width: 1180px;
-	height: @header-height;
-	margin: @margin-centering;
+
 }
-.logo{
+.page-header__logo{
+	padding-top: 18px;
+	padding-bottom: 20px;
+	text-align: center;
+
+	@media (min-width: @screen-lg) {
+	text-align: left;	
+ 	}	
+}	
+.logo-pic{
 	display: inline-block;
 	width: 143px;
 	height: 49px;
-	vertical-align: middle;   /* центрирование по вертикали? */
 }
 .main-nav{
-	display: inline-block;	
-//	vertical-align: middle; 	
-	line-height: @header-height;	
+	font-family: @fira-sans;	
+	letter-spacing: @letter-spacing-50;	
+	font-size: @font-menu;
 }
-#menu-trigger{
-	display: none;
-}
-.main-nav__list{
-	margin: 0 auto;
-	padding-left : 35px;
 
+.main-nav__list{
+	margin-top: 35px;
+	margin-left: -15px;
 }
 .main-nav__item{
 	display: inline-block;
-	text-transform: uppercase;	
-	margin-right: 10px;
+	text-transform: uppercase;
+	margin-right: 12px;
 }
 .main-nav__link{
-	padding-bottom: 5px;
 	&:hover{
 		color: @light-orange;
-		font-weight: @font-weight-medium;
-		border-bottom: 2px solid @light-orange;
 	}
 }
-.main-nav__link--chosen{
-	color: @light-orange;
-	border-bottom: 2px solid @light-orange; /* ширина линии подчеркивания - как? или это :after */
-	&:hover{
-		border-bottom: none;
-	}
-}
-.main-nav__link--chosen-item{
-//	color: @light-orange;
-//	border-bottom: 2px solid @light-orange; /* ширина линии подчеркивания - как? или это :after */
-	&:hover{
-//		border-bottom: none;
-	}
-}
-.page-header__contacts{
+
+.hamburger{
 	display: inline-block;
-	width: 285px;	
-	vertical-align: middle;	
-	position: relative;
-	margin-left: 85px;
-	margin-right: 25px;
+	width: 50px;
+	height: 50px;	
+	position: absolute;
+	top: 5%; 
+	right: 5%;
+
+	span{
+		position: absolute;
+		top: 50%; 
+		left: 50%;
+		transform: translate(-50%, -50%);						
+		display: block;
+		width: 40px;
+		height: 4px;
+		background-color: @light-orange;
+		&:before, &:after {
+			content: '';
+			display: block;
+			width: 40px;
+			height: 4px;
+			background-color: @light-orange;
+		}
+		&:before {
+			transform: translateY(-250%);
+		}
+		&:after {
+			transform: translateY(150%);
+		}
+	}
 }
-.page-header__contacts > strong {
+
+
+
+
+
+
+
+
+/* Подчеркивание ссылок меню */
+
+	// .link--underline:hover:before,
+	// .link--underline:focus:before,
+	// .link--underline:active:before {
+	//   content: '';
+	//   display: inline-block;
+	//   width: 30px;
+	//   height: 2px;
+	//   background-color: #ff7435;
+	//   position: absolute;
+	//   left: 50%;
+	//   transform: translate(-50%);
+	//   bottom: -6px;
+	//  }
+	// .link--underline-double:hover:after,
+	// .link--underline-double:focus:after,
+	// .link--underline-double:active:after {
+	//   content: '';
+	//   display: inline-block;
+	//   width: 30px;
+	//   height: 2px;
+	//   background-color: #ff7435;
+	//   position: absolute;
+	//   left: 50%;
+	//   transform: translate(-50%);
+	//   bottom: -10px;
+	// }
+
+.page-header__contacts{
+	strong {
+		display: block;
+		font-family: @pt-sans-caption;
+		font-weight: @font-weight-bold;
+		font-size: @font-accent;
+		padding-top: 25px;  		/* как сцентрировать по вертикали?  padding/margin/line-height ? */ 
+	}	
+	span{
+		display: block;
+		font-family: @fira-sans;	
+		letter-spacing: @letter-spacing-50;	
+		font-size: @font-menu;
+		padding-top: 5px;			/* как сцентрировать по вертикали?  padding/margin/line-height ? */ 
+	}
+}
+
+
+.page-header__button{
+	margin-left: 15px;
+	padding-top: 27px;			/* как сцентрировать по вертикали?  padding/margin/line-height ? */ 
+}
+
+
+.hamburger-opened{
+	display: none;	/* будет изменяться скриптом */
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+	width: 100%;
+	text-align: center;	
+	font-family: @fira-sans;	
+	line-height: 3.57em;	
+	font-size: @font-menu;	
+	@media (min-width: @screen-sm) {
+		
+	}
+ 	@media (min-width: @screen-lg) {
+		display: none;			/* не должно изменяться скриптом */
+	}
+}
+.hamburger-opened__item{
 	display: block;
-	font-family: @pt-sans-caption;
-	font-weight: @font-weight-bold;
-	font: @font-strong;
+	width: 100%;	
+	border: 1px solid @grey-lighter;
+	margin-top: -1px;	
 }

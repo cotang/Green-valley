@@ -1,45 +1,129 @@
-@relax-height:             400px;
+//@relax-height:             400px;
 
 
 .relax{
-	width: @large-width;
-	height: @relax-height;
-	margin: @margin-centering;
+	width: 100%;
+//	height: 400px;
+	margin-top: 50px;
+	padding-top: 25px;
+	padding-bottom: 50px;
 	text-align: center;
-	background: url(../img/bg01.png) 50% -10px no-repeat;	
+	background: url(../img/bg01.png) 50% -10px no-repeat;
 }
 .relax__title{
 	margin: 0;
-	padding-top: 20px;
-	font: @font-h2;
+//	padding-top: 20px;
+	font-size: @font-h2-3;
 	font-family: @pt-serif-caption;
 	letter-spacing: @letter-spacing-15;	
+	font-weight: @font-weight-regular;
+	@media (min-width: @screen-sm) {
+		font-size: @font-h2-2;	
+	}
+ 	@media (min-width: @screen-lg) {
+	
+	}	
 }
 .relax__text-wrapper{
-	width: 580px;
+	width: 100%;
 	margin: @margin-centering;	
-	font: @font-p;
+	font-size: @font-p;
 	font-family: @fira-sans;
 	letter-spacing: @letter-spacing-15;
-	margin-top: 25px;		
+	line-height: @line-height;
+	margin-top: 25px;
+	@media (min-width: @screen-sm) {
+		float: none;	
+	}
+ 	@media (min-width: @screen-lg) {
+		float: none;
+	}	
+
+	 span{
+		display: none;
+		@media (min-width: @screen-sm) {
+			display: inline;			
+		}				
+	}
+
 }
 .relax__features{
-	width: 780px;
-	margin: @margin-centering;
-	margin-top: 30px;
-	padding: 0;	
-	display: flex;
-	justify-content: space-between;
-	text-transform: uppercase;
-	font: @font-p2;              /* подходит только для однострочного описания */ 
-	font-family: @fira-sans;
-	font-weight: @font-weight-medium;	
-	letter-spacing: @letter-spacing-15;	
-	li{
-		display: inline-block;  /* только чтобы убрать маркеры, т.к. для flex не требуется */
-		width: 80px;
-		height: 80px;
-		border-radius: 40px;
-		padding-top: 80px;     /* если сделать больше, удлинится изображение */ 
+	display: none;
+
+	@media (min-width: @screen-sm) {
+		float: none;		
+
+		margin: @margin-centering;
+		margin-top: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-transform: uppercase;
+		font-size: @font-p;
+		font-family: @fira-sans;
+		font-weight: @font-weight-medium;	
+		letter-spacing: @letter-spacing-15;	
+		li{
+			text-align: center;
+			list-style-type: none;
+			width: 80px;
+			height: 80px;
+			border-radius: 40px;
+			padding-top: 80px; 
+		 	@media (min-width: @screen-sm) {
+				margin: 0 20px 60px;
+			}	
+			@media (min-width: @screen-lg) {
+				margin: 0;
+			}		
+		}
+	}
+ 	@media (min-width: @screen-lg) {
+		float: none;
+		justify-content: space-between;		
 	}
 }
+
+
+// .relax{
+// 	width: @large-width;
+// 	height: @relax-height;
+// 	margin: @margin-centering;
+// 	text-align: center;
+// 	background: url(../img/bg01.png) 50% -10px no-repeat;	
+// }
+// .relax__title{
+// 	margin: 0;
+// 	padding-top: 20px;
+// 	font: @font-h2;
+// 	font-family: @pt-serif-caption;
+// 	letter-spacing: @letter-spacing-15;	
+// }
+// .relax__text-wrapper{
+// 	width: 580px;
+// 	margin: @margin-centering;	
+// 	font: @font-p;
+// 	font-family: @fira-sans;
+// 	letter-spacing: @letter-spacing-15;
+// 	margin-top: 25px;		
+// }
+// .relax__features{
+// 	width: 780px;
+// 	margin: @margin-centering;
+// 	margin-top: 30px;
+// 	padding: 0;	
+// 	display: flex;
+// 	justify-content: space-between;
+// 	text-transform: uppercase;
+// 	font: @font-p2;              /* подходит только для однострочного описания */ 
+// 	font-family: @fira-sans;
+// 	font-weight: @font-weight-medium;	
+// 	letter-spacing: @letter-spacing-15;	
+// 	li{
+// 		display: inline-block;  /* только чтобы убрать маркеры, т.к. для flex не требуется */
+// 		width: 80px;
+// 		height: 80px;
+// 		border-radius: 40px;
+// 		padding-top: 80px;     /* если сделать больше, удлинится изображение */ 
+// 	}
+// }

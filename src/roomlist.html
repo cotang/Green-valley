@@ -8,24 +8,37 @@
 </head>
 <body>
 
-
-	<header class="page-header">
-		<div class="page-header__inner">
-			<a href="" class="logo"  style="background-image: url(img/header-logo.png);"></a>
+ 
+	<header class="page-header  container">
+		<div class="page-header__inner  row">
+			<div class="page-header__logo  col-xs-12  col-lg-2">
+				<a href="" class="logo-pic"  style="background-image: url(img/header-logo.png);"></a>
+			</div>
 			<nav class="main-nav">
-				<span id="menu_trigger" class="hamburger"></span>
-				<ul class="main-nav__list">
-					<li class="main-nav__item"><a href="" class="main-nav__link  main-nav__link--chosen">Номера</a></li>
+				<a href="" id="menu_trigger"  class="hamburger  hidden-lg"><span></span></a>
+				<ul class="main-nav__list  col-lg-5  visible-lg-block">
+					<li class="main-nav__item"><a href="roomlist.html" class="main-nav__link">Номера</a></li>
 					<li class="main-nav__item"><a href="" class="main-nav__link">Коттедж</a></li>
 					<li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
 					<li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
 					<li class="main-nav__item"><a href="" class="main-nav__link">Контакты</a></li>
 				</ul>
 			</nav>
-			<div class="page-header__contacts"><strong>+7 812 777-55-88</strong>г.Санкт-Петербург, Приморское ш.600</div>
-			<a href="" class="btn btn--icon-calendar">Забронировать</a>
+			<div class="page-header__contacts  col-lg-3  visible-lg-block"><strong>+7 812 777-55-88</strong><span>г.Санкт-Петербург, Приморское ш.600</span></div>
+			<div class="page-header__button  col-lg-2  visible-lg-block">
+				<a href="" class="btn btn--icon-calendar">Забронировать</a>
+			</div>
 		</div>
 	</header>
+
+
+	<ul class="hamburger-opened">
+		<li class="hamburger-opened__item"><a href="roomlist.html" class="main-nav__link">Номера</a></li>
+		<li class="hamburger-opened__item"><a href="" class="main-nav__link">Коттедж</a></li>
+		<li class="hamburger-opened__item"><a href="" class="main-nav__link">Ресторан</a></li>
+		<li class="hamburger-opened__item"><a href="" class="main-nav__link">Отдых</a></li>
+		<li class="hamburger-opened__item"><a href="" class="main-nav__link">Контакты</a></li>
+	</ul>
 
 
 	<section class="rooms-banner"  style="background-image: url(img/roomlist-header.jpg);">
@@ -39,39 +52,75 @@
 		<h2 class="rooms__title">Категории</h2>
 		<ul class="rooms__list">
 			<li class="rooms__item">
+				<header class="room-type">
+					<h3>Эконом</h3>
+					<span class="price-per-night">от <strong>3400</strong> руб./сутки</span>
+				</header>
 				<img src="img/roomlist-econom.jpg" alt="">
-				<div class="rooms__info-wrapper">
-					<header class="room-type">
-						<h3>Эконом</h3>
-						<span class="price-per-night">от <strong>3400</strong> руб./сутки</span>
-					</header>
-					<p class="room-short-description">В отеле 30 таких номеров площадью от 16 до 20 кв.м. Рассчитаны на проживание 1-2 человек. Часть номеров с видом на Финский залив. </p>
-					<a href="" class="btn">Забронировать</a>
+				<p class="room-short-description">В отеле 30 таких номеров площадью от 16 до 20 кв.м. Рассчитаны на проживание 1-2 человек.<br /> Часть номеров с видом на Финский залив. </p>
+				<div class="rooms__btn-wrapper">
+					<div class="rooms__btn"><a href="" class="btn">Забронировать</a></div>
 					<a href="single-room.html" class="details">Подробнее</a>
 				</div>
 			</li>
-			<li class="rooms__item"></li>
-			<li class="rooms__item"></li>
-			<li class="rooms__item"></li>
+
+			<li class="rooms__item">
+				<header class="room-type">
+					<h3>Стандарт</h3>
+					<span class="price-per-night">от <strong>4000</strong> руб./сутки</span>
+				</header>
+				<img src="img/roomlist-standart.jpg" alt="">
+				<p class="room-short-description">В отеле 20 таких номеров. Рассчитаны на проживание 2-3 человек. Площадь номера 20-25 кв.м., состоит из гостевой и спальной зоны.</p> 
+				<div class="rooms__btn-wrapper">
+					<div class="rooms__btn"><a href="" class="btn">Забронировать</a></div>
+					<a href="single-room.html" class="details">Подробнее</a>
+				</div>
+			</li>	
+
+			<li class="rooms__item">
+				<header class="room-type">
+					<h3>Стандарт +</h3>
+					<span class="price-per-night">от <strong>4500</strong> руб./сутки</span>
+				</header>
+				<img src="img/roomlist-standartplus.jpg" alt="">
+				<p class="room-short-description">В отеле 15 таких номеров. 2-комнатный номер предназначен для проживания 2-4 человек. Площадь номера 35 кв.м.</p>
+				<div class="rooms__btn-wrapper">
+					<div class="rooms__btn"><a href="" class="btn">Забронировать</a></div>
+					<a href="single-room.html" class="details">Подробнее</a>
+				</div>
+			</li>
+
+			<li class="rooms__item">
+				<header class="room-type">
+					<h3>Люкс</h3>
+					<span class="price-per-night">от <strong>5700</strong> руб./сутки</span>
+				</header>
+				<img src="img/roomlist-lux.jpg" alt="">
+				<p class="room-short-description">В отеле 5 таких номеров. Просторные номера площадью до 40 кв.м. с видом на Финский залив, выполнены в оригинальном стиле.</p>
+				<div class="rooms__btn-wrapper">
+					<div class="rooms__btn"><a href="" class="btn">Забронировать</a></div>
+					<a href="single-room.html" class="details">Подробнее</a>
+				</div>
+			</li>	
+
 		</ul>
 	</section>
 
 
 	<footer class="page-footer">
 		<div class="page-footer__inner">
-			<div class="page-footer__address">г.Санкт-Петербург Приморское ш. 600</div>
+			<div class="page-footer__address">г.Санкт-Петербург<br /> Приморское ш. 600</div>
 			<div class="page-footer__links">
-				<a href="" class="logo" style="background-image: url(img/footer-logo.png);"></a>
-				<ul class="social-media">
-					<li class="social-media__item"><a href="" style="background-image: url(img/footer-vk-green.png);"></a></li>
-					<li class="social-media__item"><a href="" style="background-image: url(img/footer-in-green.png);"></a></li>
-					<li class="social-media__item"><a href="" style="background-image: url(img/footer-fb-green.png);"></a></li>
-				</ul>
+				<a href="" class="logo-pic" style="background-image: url(img/footer-logo.png);"></a>
+				<div class="social-media">
+					<a href=""  class="social-media__item"  style="background-image: url(img/footer-vk-green.png);"></a>
+					<a href=""  class="social-media__item"  style="background-image: url(img/footer-in-green.png);"></a>
+					<a href=""  class="social-media__item"  style="background-image: url(img/footer-fb-green.png);"></a>
+				</div>
 			</div>
-			<div class="page-footer_contacts">+7 812 777-55-88 info@greenvalley.ru</div>
+			<div class="page-footer__contacts">+7 812 777-55-88<br /> info@greenvalley</div>
 		</div>
 	</footer>
-
 
 </body>
 </html>

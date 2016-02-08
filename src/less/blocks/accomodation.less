@@ -1,44 +1,87 @@
-@accomodation-height:             500px;
+//@accomodation-height:             500px;
 
 .accomodation{
-	width: @large-width;
-	height: @accomodation-height;
-	margin: @margin-centering;
-	background: url(../img/bg03.jpg) 0 0 no-repeat;		
+	width: 100%;
+	background: url(../img/bg03.jpg) 50% 50% no-repeat;	
+	background-size: cover;	
 	text-align: center;
+	padding: 0 20px;
+}
+.accomodation__inner{
+	max-width: 1200px;
+	margin: @margin-centering;	
 }
 .accomodation__title{
 	color: @white;	
 	margin: 0;
-	padding-top: 40px;
-	font: @font-h2;
+	padding: 40px 40px 30px;
+	font-size: @font-h2-3;
 	font-family: @pt-serif-caption;
-	letter-spacing: @letter-spacing-15;		
+	letter-spacing: @letter-spacing-50;		
+	font-weight: @font-weight-medium;	
+	@media (min-width: @screen-sm) {
+		font-size: @font-h2-2;
+	
+	}
+ 	@media (min-width: @screen-lg) {
+	 	
+	}			
 }
-.accomodation__type{
+.accomodation__list{
+	margin: @margin-centering;	
+	padding-bottom: 30px;
+	@media (min-width: @screen-sm) {
+		display: flex;
+		max-width: 780px;	 /* !!! */			
+	}
+ 	@media (min-width: @screen-lg) {
+	
+	}	
+}
+.accomodation__item{
 	display: inline-block;
-	width: 379px;
-	margin: 30px 10px 0;
-	height: 335px;
+	width: 100%;
+	margin: 0 0 20px;
+	padding-bottom: 35px;
 	background-color: @white;
-	font: @font-p;
+	font-size: @font-small;
 	font-family: @fira-sans;
 	font-weight: @font-weight-medium;
 	letter-spacing: @letter-spacing-50;	
 	text-transform: uppercase;	
-	> div{
-		width: 379px;
-		height: 199px;		
-	}
-	> h3{
+
+	h3{
 		margin-top: 35px;
 		margin-bottom: 5px;
-		font: @font-h3;
+		font-size: @font-h2-3;
+		font-weight: @font-weight-regular;		
 		font-family: @pt-serif;
 		letter-spacing: @letter-spacing-50;	
 		text-transform: none;
 	}
-	> strong{
+	strong{
+		font-size: @font-accent;		
 		color: @light-orange;
 	}
+	&:hover{
+		color: @grey-darkest;
+	}
+
+	@media (min-width: @screen-sm) {
+		width: 50%;	
+		margin: 0 10px 20px;				
+	}
+ 	@media (min-width: @screen-lg) {
+			 	
+	}
+
+
+
+}
+.accomodation__pic{
+		min-height: 199px;
+		// min-width: 379px;
+		width: 100%;
+		height: 100%;	
+		background-size: cover;	
 }

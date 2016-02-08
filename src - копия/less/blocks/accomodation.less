@@ -1,0 +1,44 @@
+@accomodation-height:             500px;
+
+.accomodation{
+	width: @large-width;
+	height: @accomodation-height;
+	margin: @margin-centering;
+	background: url(../img/bg03.jpg) 0 0 no-repeat;		
+	text-align: center;
+}
+.accomodation__title{
+	color: @white;	
+	margin: 0;
+	padding-top: 40px;
+	font: @font-h2;
+	font-family: @pt-serif-caption;
+	letter-spacing: @letter-spacing-15;		
+}
+.accomodation__type{
+	display: inline-block;
+	width: 379px;
+	margin: 30px 10px 0;
+	height: 335px;
+	background-color: @white;
+	font: @font-p;
+	font-family: @fira-sans;
+	font-weight: @font-weight-medium;
+	letter-spacing: @letter-spacing-50;	
+	text-transform: uppercase;	
+	> div{
+		width: 379px;
+		height: 199px;		
+	}
+	> h3{
+		margin-top: 35px;
+		margin-bottom: 5px;
+		font: @font-h3;
+		font-family: @pt-serif;
+		letter-spacing: @letter-spacing-50;	
+		text-transform: none;
+	}
+	> strong{
+		color: @light-orange;
+	}
+}

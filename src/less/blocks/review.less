@@ -1,42 +1,115 @@
-@review-height:             530px;
+
 
 .review{
-	width: @large-width;
-	height: @review-height;
-	margin: @margin-centering;
-	background: url(../img/bg02.jpg) 0 0 no-repeat;	
+	width: 100%;
+	margin: 50px auto 0;
+	background: url(../img/bg02.jpg) 50% 50% no-repeat;
+	background-size: cover;	
 	text-align: center;
+	padding-bottom: 50px;
+	@media (min-width: @screen-sm) {
+		
+	}	
+	@media (min-width: @screen-lg) {
+		margin: 40px auto 0;
+	}
+}
+.review__inner{
+	// padding-left: 0;
+	// padding-right: 0;
+	@media (min-width: @screen-sm) {
+		
+	}	
+	@media (min-width: @screen-lg) {
+
+	}
 }
 .review__title{
 	color: @white;
 	margin: 0;
-	padding-top: 40px;
-	font: @font-h2;
+	padding-top: 60px;
+	font-size: @font-h2-3;
 	font-family: @pt-serif-caption;
 	letter-spacing: @letter-spacing-15;		
+	font-weight: @font-weight-medium;	
+	@media (min-width: @screen-sm) {
+		font-size: @font-h2-2;	
+		
+	}
+ 	@media (min-width: @screen-lg) {
+		padding-top: 40px;	
+	}	
 }
 .review__carousel{
-	width: 1200px;
-	margin: 0 auto;	
-	padding: 0 100px;
-	margin-top: 40px;
-	margin-bottom: -55px; /* чтобы кнопка не уезжала вниз из-за общей высоты блока .review__slide-footer 170px */
+	width: 100%;
+	margin: 50px auto 40px;	
 	position: relative;
+	.arrow-left{
+		display: none;
+		@media (min-width: @screen-sm) {
+			display: block;
+			left: 10%;
+		}
+		@media (min-width: @screen-lg) {
+			display: block;
+			left: 5%;
+		}			
+	}
+	.arrow-right{
+		display: none;
+		@media (min-width: @screen-sm) {
+			display: block;
+			right: 10%;
+		}
+		@media (min-width: @screen-lg) {
+			display: block;
+			right: 5%;
+		}		
+	}
+	@media (min-width: @screen-lg) {
+		margin: 40px auto;	
+	}
 }
+
+
+
 .review__slide{
+	position: relative;	
 	display: inline-block;		
 	margin: 0;
-	padding: 0;
-	width: 480px;
-	height: 280px;
-	margin-right: 20px;
+//	padding: 0;
+	width: 100%;
+//	height: 280px;
+//	margin: 10px;
 	background-color: #fff;
-	padding: 115px 40px 0 40px;
-	font: @font-p2;
+	padding-top: 115px;
+	padding-bottom: 0;
+	padding-left: 40px;
+	padding-right: 40px;
+//	padding: 115px 40px 0 40px;
+	font-size: @font-p;
 	font-family: @fira-sans;
-	letter-spacing: @letter-spacing-50;	
+	letter-spacing: @letter-spacing-15;	
+	line-height: @line-height;
+
+	@media (min-width: @screen-sm) {
+		width: 62%;			
+		margin: 0 20px 60px;
+	}	
+	@media (min-width: @screen-lg) {
+		width: 40%;			
+		margin: 0 10px;
+	}		
+
 	&:nth-child(2){  					 /* как ни странно, при last-child не работает :( */
-		margin-right: 0;
+		display: none;
+		@media (min-width: @screen-sm) {
+			display: inline-block;
+			margin: 0 20px;
+		}	
+		@media (min-width: @screen-lg) {
+			margin: 0 10px;
+		}			
 	}
 }
 .review__slide-footer{
@@ -44,14 +117,17 @@
 }
 .review__date{
 	margin-top: 15px;
-	font: @font-small;
+	margin-bottom: 20px;
+	font-size: @font-small;
 	font-family: @fira-sans;
 	letter-spacing: @letter-spacing-15;
 }
 .review__author{
-	position: relative;	
-	top: -290px;
-	font: @font-small2;
+	position: absolute;	
+	top: -25px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: @font-small;
 	font-family: @fira-sans;	
 	font-weight: @font-weight-medium;			
 	> img{
@@ -60,45 +136,4 @@
 		border: 2px solid @white;
 	}
 }
-/*
-.review__slide-footer{
-	position: relative;	
-}
-.review__date{
-	margin-top: 15px;
-	font: @font-small;
-	font-family: @fira-sans;
-	letter-spacing: @letter-spacing-15;
-}
-.review__author{
-	position: absolute;  
-	top: -242px;
-	left: 150px;    // left: calc(50% - 40px) не работает в less 
-	font: @font-small2;
-	font-family: @fira-sans;	
-	font-weight: @font-weight-medium;			
-	> img{
-		display: block;
-		margin: 0 auto;
-		border: 2px solid @white;
-	}
-}
-*/
-.arrow-left{
-	display: block;
-	width: 100px;
-	height: 375px;
-	background: url(../img/arrow-left.png) 60px 120px no-repeat;
-	position: absolute;	
-	top: 0;
-	left: 0;
-}
-.arrow-right{
-	display: block;
-	width: 100px;
-	height: 375px;
-	background: url(../img/arrow-right.png) 20px 120px no-repeat;
-	position: absolute;	
-	top: 0;
-	right: 0;
-}
+

@@ -1,43 +1,92 @@
-@location-height:             828px;
+// @location-height:             828px;
 
 .location{
-	width: @large-width;
-	height: @location-height;
-	margin: @margin-centering;
+	width: 100%;
 	text-align: center;
 }
 .location__title{
 	margin: 0;
-	padding-top: 65px;
-	font: @font-h2;
+	padding: 65px 40px 0;
+	font-size: @font-h2-3;
 	font-family: @pt-serif-caption;
-	letter-spacing: @letter-spacing-15;		
+	letter-spacing: @letter-spacing-50;		
+	font-weight: @font-weight-medium;	
+	@media (min-width: @screen-sm) {
+		font-size: @font-h2-2;
+		padding: 30px 40px 0;			
+	}
+ 	@media (min-width: @screen-lg) {
+		padding: 80px 40px 0;		 	
+	}	
 }
 .location__map{
-	width: 1180px;
+	width: 100%;
+	max-width: 1200px;
 	height: 400px;
 	margin: @margin-centering;
 	margin-top: 30px;
 	background-color: red;
+	@media (min-width: @screen-sm) {
+		margin-top: 40px;
+	}
+ 	@media (min-width: @screen-lg) {
+		margin-top: 30px;		 	
+	}	
 }
-.location__transport{
+.transport{
+	margin: 0 auto 50px;
+	width: 100%;
+	max-width: 1200px;
+ 	@media (min-width: @screen-lg) {
+		display: flex;	
+		margin: 0 auto 65px;				 	
+	}		
+
+}
+.transport__item{
 	display: inline-block;
-	vertical-align: top;
-	margin-top: 40px;
-	width: 480px;	
-	margin-right: 20px;
-	text-align: left;
-	> div{
-		width: 60px;
-		height: 30px;
-		margin: @margin-centering;	
-	}				
-	> strong{
+	padding: 30px 50px 0;
+		
+	strong{
 		display: inline-block;
-		padding-top: 20px;
-		text-align: center;
+		padding: 15px 0;
+		text-transform: uppercase;
+		font-size: @font-small;
+		font-family: @fira-sans;
+		font-weight: @font-weight-medium;		
 	}
-	> p{
-		padding-left: 40px;
+	p{
+		margin: 0;
+		font-size: @font-p;
+		font-family: @fira-sans;
+		line-height: @line-height;
+	 	@media (min-width: @screen-lg) {
+			text-align: left;	
+		}
 	}
+
+	@media (min-width: @screen-sm) {
+
+	}
+ 	@media (min-width: @screen-lg) {
+		width: 50%;
+		&:nth-child(1){
+			padding: 40px 30px 0 130px;
+		}	
+		&:nth-child(2){
+			padding: 40px 130px 0 30px;
+		}				 	
+	}
+
+
+}
+.transport__bus-pic{
+	margin: @margin-centering;	
+	width: 50px;
+	height: 29px;	
+}
+.transport__train-pic{
+	margin: @margin-centering;	
+	width: 58px;
+	height: 26px;	
 }
