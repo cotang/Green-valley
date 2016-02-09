@@ -1,0 +1,102 @@
+.residence{
+	width: 100%;
+	text-align: center;
+}
+.residence__inner{
+	padding-top: 40px;
+	padding-bottom: 45px;
+ 	@media (min-width: @screen-sm) {
+		padding-top: 45px;
+		padding-bottom: 50px;		
+	}	
+}
+.residence__title{
+	margin: 0 0 20px;
+	font-size: @font-h2-3;
+	font-family: @pt-serif;
+	font-weight: @font-weight-regular;	
+	letter-spacing: @letter-spacing-50;	
+}
+.residence__list{
+	padding: 0;
+	margin-right: 20px;
+	margin-left: 20px;
+	border: 1px solid rgba(0,0,0,.08);
+	font-size: 0;
+	position: relative;
+
+ 	@media (min-width: @screen-sm) {
+		width: 380px;
+		margin: @margin-centering;			
+	}	
+}
+.residence__list:after{
+	content: "";
+	display: block;
+	width: 1px;
+	height: 70%;
+	background-color: rgba(0,0,0,.08);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+	}
+.residence__item{
+	display: inline-block;
+	height: 160px;
+	width: 50%;
+	font-size: @font-small;
+	font-family: @fira-sans;
+	letter-spacing: @letter-spacing-50;	
+	text-transform: uppercase;
+	position: relative;
+	&:first-child .residence__item-name:after{
+		width: 82px;
+		height: 64px;
+		background: url(../../img/form-hotel.png) no-repeat;
+	}
+	&:last-child .residence__item-name:after{
+		width: 80px;
+		height: 62px;
+		background: url(../../img/form-cottage.png) no-repeat;
+	}	
+}
+.residence__choise{
+	display: block;
+	cursor: pointer;
+	padding-bottom: 100px;
+	input{
+		display: none;
+	}
+}
+.residence__choise--active{
+	.residence__item-name:after{
+		opacity: 1.0;			
+	}
+	.residence__item-name:before{
+		content: "";
+		display: block;
+		width: 17px;
+		height: 12px;
+		background: url(../../img/form-check.png) no-repeat;	
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 130px;
+	}
+}
+.residence__item-name{
+	display: block;
+	margin-top: 20px;
+}
+.residence__item-name:after{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 50px;
+	opacity: 0.4;
+}
+
+

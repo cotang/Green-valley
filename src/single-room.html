@@ -2,43 +2,15 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Econom</title>
+	<meta name="viewport" content="width=device-width, inintial scale=1.0">
 	<link href='https://fonts.googleapis.com/css?family=PT+Serif+Caption|Fira+Sans:400,500|PT+Sans+Caption:400,700|PT+Serif:400,700' rel='stylesheet'>
-	<link rel="stylesheet" href="css/style.css">	
+	<link rel="stylesheet" href="css/style.css">
+	<title>Econom</title>		
 </head>
 <body>
 
 
-	<header class="page-header  container">
-		<div class="page-header__inner  row">
-			<div class="page-header__logo  col-xs-12  col-lg-2">
-				<a href="" class="logo-pic"  style="background-image: url(img/header-logo.png);"></a>
-			</div>
-			<nav class="main-nav">
-				<a href="" id="menu_trigger"  class="hamburger  hidden-lg"><span></span></a>
-				<ul class="main-nav__list  col-lg-5  visible-lg-block">
-					<li class="main-nav__item"><a href="roomlist.html" class="main-nav__link">Номера</a></li>
-					<li class="main-nav__item"><a href="" class="main-nav__link">Коттедж</a></li>
-					<li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
-					<li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
-					<li class="main-nav__item"><a href="" class="main-nav__link">Контакты</a></li>
-				</ul>
-			</nav>
-			<div class="page-header__contacts  col-lg-3  visible-lg-block"><strong>+7 812 777-55-88</strong><span>г.Санкт-Петербург, Приморское ш.600</span></div>
-			<div class="page-header__button  col-lg-2  visible-lg-block">
-				<a href="" class="btn btn--icon-calendar">Забронировать</a>
-			</div>
-		</div>
-	</header>
-
-
-	<ul class="hamburger-opened">
-		<li class="hamburger-opened__item"><a href="roomlist.html" class="main-nav__link">Номера</a></li>
-		<li class="hamburger-opened__item"><a href="" class="main-nav__link">Коттедж</a></li>
-		<li class="hamburger-opened__item"><a href="" class="main-nav__link">Ресторан</a></li>
-		<li class="hamburger-opened__item"><a href="" class="main-nav__link">Отдых</a></li>
-		<li class="hamburger-opened__item"><a href="" class="main-nav__link">Контакты</a></li>
-	</ul>
+	@@include('_html_inc/page_header.html')
 
 
 	<section class="room">
@@ -121,20 +93,7 @@
 	</section>
 
 
-	<footer class="page-footer">
-		<div class="page-footer__inner">
-			<div class="page-footer__address">г.Санкт-Петербург<br /> Приморское ш. 600</div>
-			<div class="page-footer__links">
-				<a href="" class="logo-pic" style="background-image: url(img/footer-logo.png);"></a>
-				<div class="social-media">
-					<a href=""  class="social-media__item"  style="background-image: url(img/footer-vk-green.png);"></a>
-					<a href=""  class="social-media__item"  style="background-image: url(img/footer-in-green.png);"></a>
-					<a href=""  class="social-media__item"  style="background-image: url(img/footer-fb-green.png);"></a>
-				</div>
-			</div>
-			<div class="page-footer__contacts">+7 812 777-55-88<br /> info@greenvalley</div>
-		</div>
-	</footer>
+	@@include('_html_inc/page_footer.html')
 
 
 </body>

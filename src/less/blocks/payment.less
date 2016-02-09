@@ -1,0 +1,212 @@
+.payment{
+	width: 100%;
+	background-color: @grey-lighter;	
+	text-align: center;	
+}
+.payment__inner{
+	padding-top: 40px;
+	padding-bottom: 30px;
+	// margin-right: 20px;
+	// margin-left: 20px;	
+ 	@media (min-width: @screen-sm) {
+ 		max-width: 800px;
+		margin: @margin-centering;			
+		// margin-right: 10px;
+		// margin-left: 10px;		
+		// padding-bottom: 40px;		
+	}	
+	@media (min-width: @screen-lg) {
+		
+	}
+}
+.payment__title{
+	margin: 0 0 35px;
+	font-size: @font-h2-3;
+	font-family: @pt-serif;
+	font-weight: @font-weight-regular;	
+	letter-spacing: @letter-spacing-50;	
+}
+.pay{
+
+	@media (min-width: @screen-sm) {
+		display: flex;		
+			width: 100%;
+		}
+	@media (min-width: @screen-lg) {
+			max-width: 780px;
+			margin: @margin-centering;	
+		}			
+}
+.pay__wrapper{
+	@media (min-width: @screen-sm) {
+			// width: 61.71875%;
+			// float: right;
+			// margin-left: 20px;
+			width: 65%;
+			order: 1;
+			margin-left: 10px;
+		}
+	@media (min-width: @screen-lg) {
+			// max-width: 480px;
+
+		}		
+}
+.pay__later{
+	margin-bottom: 30px;
+	height: 100%;
+}
+.pay__choise{
+	display: block;
+	background-color: @white;
+	font-size: @font-small;
+	font-family: @fira-sans;
+	cursor: pointer;
+	text-align: left;
+	padding-left: 70px;
+	position: relative;
+	input{
+		display: none;
+	}
+	h4{
+		font-weight: @font-weight-medium;	
+		letter-spacing: @letter-spacing-50;
+		text-transform: uppercase;		
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-bottom: 0;	
+		margin-top: 0;	
+	}
+	p{
+		display: none;
+	 	@media (min-width: @screen-sm) {
+			display: block;
+			margin: 0;	
+			width: 270px;
+			position: absolute;
+			left: 180px;
+			top: 10px;
+		}		
+	}
+	&:before{
+		content: "";
+		display: block;
+		width: 17px;
+		height: 12px;
+		background: url(../../img/form-check.png) no-repeat;	
+		position: absolute;
+		left: 20px;
+		top: 50%;
+		transform: translateY(-50%);	
+	}
+}
+.card-info{
+	width: 100%;
+	margin: -15px 0 20px;
+	padding: 0 40px 20px;
+	border: none;
+	font-size: @font-small;
+	font-family: @fira-sans;
+	text-transform: uppercase;
+	text-align: left;	
+	background-color: @white;	
+	@media (min-width: @screen-sm) {
+		margin: 0 0 20px;		
+		padding: 10px 0 20px;
+		display: flex;
+		}	
+}
+.card-info__wrapper{
+	@media (min-width: @screen-sm) {
+		width: 65%;
+		margin-left: 20px;
+		margin-right: 10px;
+		// width: 150px;		
+		}
+}
+.card-info__wrapper--short{
+	@media (min-width: @screen-sm) {
+		width: 35%;
+		margin-left: 10px;
+		margin-right: 40px;		
+		// width: 150px;		
+		}
+}
+.card-info__field{
+	display: block;
+	// width: 100%;
+	span{
+		display: block;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	input{
+		width: 100%;
+		text-align: center;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		color: @grey;		
+	}
+}
+.card-info__field--short{
+	padding-right: 50%;
+	@media (min-width: @screen-sm) {
+		padding-right: 0;
+	}	
+}
+.bill{
+	background-color: @white;
+	font-size: @font-small;
+	font-family: @fira-sans;
+	padding: 20px 40px;
+	margin-bottom: 20px;
+	display: none;
+	@media (min-width: @screen-sm) {
+			width: 35%;
+			margin-right: 10px;
+		}	
+	h3{
+		margin: 0;
+		font-size: @font-small;
+		text-transform: uppercase;
+		font-weight: @font-weight-regular;	
+	}
+
+}
+.bill--false{
+	display: block;
+}
+.bill__charge{
+	font-size: @font-price;
+	font-weight: @font-weight-medium;
+
+}
+.bill__annotation{
+	text-align: left;
+	&:before{
+		content: "";
+		display: inline-block;
+		width: 16px;
+		height: 12px;
+		background: url(../../img/form-warning.png) no-repeat;
+	}
+}
+.dashed{
+	border-bottom: 1px dashed @grey-darkest;
+}
+.payment__button{
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 40px;
+	margin-bottom: 60px;
+	@media (min-width: @screen-sm) {
+		margin-right: 0px;
+		margin-left: 0px;
+		margin-top: 40px;		
+		}
+	@media (min-width: @screen-lg) {
+		margin-right: 10px;
+		margin-left: 10px;
+		margin-top: 30px;
+		margin-bottom: 45px;		
+		}			
+}
