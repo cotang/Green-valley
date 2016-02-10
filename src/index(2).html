@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Заголовок</title>
+<meta name="description" content="">
+@@include('_html_inc/page_head.html')
+</head>
+
+<body>
+
+@@include('_html_inc/page_header.html')
+
+<h1>Заголовок h1</h1>
+
+<p>ПараграфЪ</p>
+
+<img src="img/DavidBlaine.jpg" height="331" width="382" alt="Немного магии?">
+
+<p>ПараграфЪ</p>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12  col-lg-2"  style="background-color: yellow;">logo</div>
+		<div class="col-lg-4  visible-lg-block"  style="background-color: cyan; border: 1px solid black;">nav</div>
+		<div class="col-lg-4  visible-lg-block"  style="background-color: yellow; border: 1px solid black;">contact</div>		
+		<div class="col-lg-2  visible-lg-block"  style="background-color: cyan;">btn</div>		
+		<div class="hidden-lg"  style="background-color: green;">hamburger</div>					
+	</div>
+	<div class="row">
+		<div class="col-xs-12  col-lg-2"  style="background-color: yellow;">logo</div>
+		<div class="col-lg-4  visible-lg-block"  style="background-color: cyan; border: 1px solid black; margin: 0 20px 0;">nav</div>
+		<div class="col-lg-4  visible-lg-block"  style="background-color: yellow; border: 1px solid black; padding: 0 20px 0">contact</div>		
+		<div class="col-lg-2  visible-lg-block"  style="background-color: cyan;">btn</div>		
+		<div class="hidden-lg"  style="background-color: green;">hamburger</div>					
+	</div>
+	<div class="row">
+		<div class="col-xs-12  col-lg-2  col-lg-offset-4"  style="background-color: red;">logo</div>
+		<div class="col-lg-6"  style="background-color: blue;">nav</div>	
+	</div>	
+</div>
+
+@@include('_html_inc/page_footer.html')
+@@include('_html_inc/page_bottom.html')
+
+</body>
+</html>
