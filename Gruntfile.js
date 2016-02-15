@@ -65,6 +65,26 @@ module.exports = function(grunt) {
       }
     },
 
+    // склеиваем файлы js
+    concat: {
+      start: {
+        src: [
+          // 'src/js/plugin.js',
+          'src/js/*.js'
+        ],
+        dest: 'build/js/script.js'
+      }
+    },
+
+    // минимизируем файлы js
+    uglify: {
+      start: {
+        files: {
+          'build/js/script.min.js': ['build/js/script.js']
+        }
+      }
+    },
+
     // процесс копирования
     copy: {
       // копируем картинки
@@ -109,6 +129,14 @@ module.exports = function(grunt) {
           spawn: false,
         },
       },
+       // следить за скриптами     
+      scripts: {
+        files: ['src/js/script.js'],
+        tasks: ['js'],
+        options: {
+          spawn: false
+        },
+      },      
       // следить за картинками
       images: {
         // за сохранением каких файлов следить
@@ -165,6 +193,7 @@ module.exports = function(grunt) {
   // задача по умолчанию
   grunt.registerTask('default', [
     'style',
+    'js',    
     'img',
     'includereplace:html',
     'browserSync',
@@ -178,6 +207,14 @@ module.exports = function(grunt) {
     'cmq',
     'cssmin',
   ]);
+
+  // только компиляция скриптов
+  grunt.registerTask('js', [
+    'concat',                 // объединяем все указанные JS-файлы в build/js/script.min.js
+    'uglify',                 // минифицируем build/js/script.min.js
+  ]);
+
+ 
 
   // только обработка картинок
   grunt.registerTask('img', [

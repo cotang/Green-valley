@@ -14,12 +14,10 @@
 
 
 
-	<section class="reservation container">
-		<div class="row">
-			<h2 class="col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">Бронирование</h2>
-		</div>	
-		<div class="row">				
-			<p class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <strong>+7 812 777-55-88</strong></p>
+	<section class="reservation">
+		<div class="reservation__inner">
+			<h2 class="reservation__title">Бронирование</h2>
+			<p class="reservation__text">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <strong>+7 812 777-55-88</strong></p>
 		</div>
 	</section>
 
@@ -28,29 +26,27 @@
 
 
 		<section class="stay-period">
-			<div class="stay-period__inner  container">
-				<div class="row">
-					<header class="step">Шаг 1</header>
-					<h2 class="stay-period__title">Дата отдыха</h2>
-					<ul class="stay-period__dates  col-lg-4 col-lg-offset-4">	
-						<li class="date  col-xs-8 col-xs-offset-2  col-sm-3 col-sm-offset-3  col-lg-4 col-lg-offset-1">	 <!-- на focus должен быть добавлен класс date--active -->
-							Дата въезда
-							<div class="date__inner">
-								<label><input type="text"  id="arrival-day"  maxlenght="2"  value="ДД"></label> 
-								<label><input type="text"  id="arrival-month"  maxlenght="2"  value="ММ"></label> 
-								<label><input type="text"  id="arrival-year"  maxlenght="4"  value="ГГГГ"></label>
-							</div>
-						</li>
-						<li class="date  col-xs-8 col-xs-offset-2  col-sm-3 col-sm-offset-0  col-lg-4 col-lg-offset-2">	
-							Дата выезда
-							<div class="date__inner">
-								<label><input type="text"  id="departure-day"  maxlenght="2"  value="ДД"></label> 
-								<label><input type="text"  id="departure-month"  maxlenght="2"  value="ММ"></label> 
-								<label><input type="text"  id="departure-year"  maxlenght="4"  value="ГГГГ"></label>
-							</div>
-						</li>												
-					</ul>
-				</div>
+			<div class="stay-period__inner">
+				<header class="step">Шаг 1</header>
+				<h2 class="stay-period__title">Дата отдыха</h2>
+				<ul class="stay-period__date-list">	
+					<li class="stay-period__date-item">	 <!-- на focus должен быть добавлен класс date--active -->
+						Дата въезда
+						<div class="stay-period__date">
+							<label><input type="text"  id="arrival-day"  maxlenght="2"  value="ДД"  onfocus="if(this.value==this.defaultValue)this.value='';"></label> 
+							<label><input type="text"  id="arrival-month"  maxlenght="2"  value="ММ"  onfocus="if(this.value==this.defaultValue)this.value='';"></label> 
+							<label><input type="text"  id="arrival-year"  maxlenght="4"  value="ГГГГ"  onfocus="if(this.value==this.defaultValue)this.value='';"></label>
+						</div>
+					</li>
+					<li class="stay-period__date-item">	
+						Дата выезда
+						<div class="stay-period__date">
+							<label><input type="text"  id="departure-day"  maxlenght="2"  placeholder="ДД"></label> 
+							<label><input type="text"  id="departure-month"  maxlenght="2"  placeholder="ММ"></label> 
+							<label><input type="text"  id="departure-year"  maxlenght="4"  placeholder="ГГГГ"  onfocus="if(this.value==this.defaultValue)this.value='';"></label>
+						</div>
+					</li>												
+				</ul>
 			</div>	
 		</section>
 

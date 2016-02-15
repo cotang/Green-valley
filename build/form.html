@@ -10,24 +10,26 @@
 <body>
 
 
-	  <header class="page-header  container">
-    <div class="page-header__inner  row">
-      <div class="page-header__logo  col-xs-12  col-lg-2">
-        <a href="" class="logo-pic"  style="background-image: url(img/header-logo.png);"></a>
-      </div>
-      <nav class="main-nav">
-        <a href="" id="menu_trigger"  class="hamburger  hidden-lg"><span></span></a>
-        <ul class="main-nav__list  col-lg-5  visible-lg-block">
-          <li class="main-nav__item"><a href="roomlist.html" class="main-nav__link">Номера</a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">Коттедж</a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
-          <li class="main-nav__item"><a href="index(2).html" class="main-nav__link">Контакты</a></li>
-        </ul>
-      </nav>
-      <div class="page-header__contacts  col-lg-3  visible-lg-block"><strong>+7 812 777-55-88</strong><span>г.Санкт-Петербург, Приморское ш.600</span></div>
-      <div class="page-header__button  col-lg-2  visible-lg-block">
-        <a href="" class="btn btn--icon-calendar">Забронировать</a>
+	  <header class="page-header">
+    <div class="container">
+      <div class="page-header__inner  row">
+        <div class="page-header__logo  col-xs-12  col-lg-2">
+          <a href="" class="logo-pic"  style="background-image: url(img/header-logo.png);"></a>
+        </div>
+        <nav class="main-nav">
+          <a href="" id="menu_trigger"  class="hamburger  hidden-lg"><span></span></a>
+          <ul class="main-nav__list  col-lg-5  visible-lg-block">
+            <li class="main-nav__item"><a href="roomlist.html" class="main-nav__link">Номера</a></li>
+            <li class="main-nav__item"><a href="" class="main-nav__link">Коттедж</a></li>
+            <li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
+            <li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
+            <li class="main-nav__item"><a href="index(2).html" class="main-nav__link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="page-header__contacts  col-lg-3  visible-lg-block"><strong>+7 812 777-55-88</strong><span>г.Санкт-Петербург, Приморское ш.600</span></div>
+        <div class="page-header__button  col-lg-2  visible-lg-block">
+          <a href="" class="btn btn--icon-calendar">Забронировать</a>
+        </div>
       </div>
     </div>
   </header>
@@ -43,12 +45,10 @@
 
 
 
-	<section class="reservation container">
-		<div class="row">
-			<h2 class="col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">Бронирование</h2>
-		</div>	
-		<div class="row">				
-			<p class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <strong>+7 812 777-55-88</strong></p>
+	<section class="reservation">
+		<div class="reservation__inner">
+			<h2 class="reservation__title">Бронирование</h2>
+			<p class="reservation__text">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <strong>+7 812 777-55-88</strong></p>
 		</div>
 	</section>
 
@@ -57,29 +57,27 @@
 
 
 		<section class="stay-period">
-			<div class="stay-period__inner  container">
-				<div class="row">
-					<header class="step">Шаг 1</header>
-					<h2 class="stay-period__title">Дата отдыха</h2>
-					<ul class="stay-period__dates  col-lg-4 col-lg-offset-4">	
-						<li class="date  col-xs-8 col-xs-offset-2  col-sm-3 col-sm-offset-3  col-lg-4 col-lg-offset-1">	 <!-- на focus должен быть добавлен класс date--active -->
-							Дата въезда
-							<div class="date__inner">
-								<label><input type="text"  id="arrival-day"  maxlenght="2"  value="ДД"></label> 
-								<label><input type="text"  id="arrival-month"  maxlenght="2"  value="ММ"></label> 
-								<label><input type="text"  id="arrival-year"  maxlenght="4"  value="ГГГГ"></label>
-							</div>
-						</li>
-						<li class="date  col-xs-8 col-xs-offset-2  col-sm-3 col-sm-offset-0  col-lg-4 col-lg-offset-2">	
-							Дата выезда
-							<div class="date__inner">
-								<label><input type="text"  id="departure-day"  maxlenght="2"  value="ДД"></label> 
-								<label><input type="text"  id="departure-month"  maxlenght="2"  value="ММ"></label> 
-								<label><input type="text"  id="departure-year"  maxlenght="4"  value="ГГГГ"></label>
-							</div>
-						</li>												
-					</ul>
-				</div>
+			<div class="stay-period__inner">
+				<header class="step">Шаг 1</header>
+				<h2 class="stay-period__title">Дата отдыха</h2>
+				<ul class="stay-period__date-list">	
+					<li class="stay-period__date-item">	 <!-- на focus должен быть добавлен класс date--active -->
+						Дата въезда
+						<div class="stay-period__date">
+							<label><input type="text"  id="arrival-day"  maxlenght="2"  value="ДД"  onfocus="if(this.value==this.defaultValue)this.value='';"></label> 
+							<label><input type="text"  id="arrival-month"  maxlenght="2"  value="ММ"  onfocus="if(this.value==this.defaultValue)this.value='';"></label> 
+							<label><input type="text"  id="arrival-year"  maxlenght="4"  value="ГГГГ"  onfocus="if(this.value==this.defaultValue)this.value='';"></label>
+						</div>
+					</li>
+					<li class="stay-period__date-item">	
+						Дата выезда
+						<div class="stay-period__date">
+							<label><input type="text"  id="departure-day"  maxlenght="2"  placeholder="ДД"></label> 
+							<label><input type="text"  id="departure-month"  maxlenght="2"  placeholder="ММ"></label> 
+							<label><input type="text"  id="departure-year"  maxlenght="4"  placeholder="ГГГГ"  onfocus="if(this.value==this.defaultValue)this.value='';"></label>
+						</div>
+					</li>												
+				</ul>
 			</div>	
 		</section>
 
@@ -238,16 +236,16 @@
 
 	  <footer class="page-footer">
     <div class="page-footer__inner">
-      <div class="page-footer__address">г.Санкт-Петербург<br /> Приморское ш. 600</div>
+      <div class="page-footer__address"><p>г.Санкт-Петербург</p><p>Приморское ш. 600</p></div>
       <div class="page-footer__links">
         <a href="" class="logo-pic" style="background-image: url(img/footer-logo.png);"></a>
         <div class="social-media">
-          <a href=""  class="social-media__item"  style="background-image: url(img/footer-vk-green.png);"></a>
-          <a href=""  class="social-media__item"  style="background-image: url(img/footer-in-green.png);"></a>
-          <a href=""  class="social-media__item"  style="background-image: url(img/footer-fb-green.png);"></a>
+          <a href=""  class="social-media__item"  style="background-image: url(img/footer-vk-green.png); width: 25px; height: 14px;"></a>
+          <a href=""  class="social-media__item"  style="background-image: url(img/footer-in-green.png); width: 21px; height: 20px;"></a>
+          <a href=""  class="social-media__item"  style="background-image: url(img/footer-fb-green.png); width: 20px; height: 20px;"></a>
         </div>
       </div>
-      <div class="page-footer__contacts">+7 812 777-55-88<br /> info@greenvalley</div>
+      <div class="page-footer__contacts"><p>+7 812 777-55-88</p><p>info@greenvalley.ru</p></div>
     </div>
   </footer>
 

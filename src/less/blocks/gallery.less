@@ -2,13 +2,95 @@
 
 .gallery{
 	width: 100%;
-	margin-top: 85px;
-}
-.gallery__inner{
-	max-width: 1180px;
-	width: 100%;
-	height: 615px;
-	margin: @margin-centering;	
-	background: url(../img/gallery-main.jpg) 0 0 no-repeat,
-	            url(../img/gallery-thumb01.jpg) 0 500px repeat-x ;
+
+	&__inner{
+		margin: @margin-centering;	
+		text-align: center;	
+		width: 100%;
+		height: 100%;
+
+		@media (min-width: @screen-sm) {
+			width: @screen-sm;
+		}		
+		@media (min-width: @screen-lg) {
+			width: @screen-lg;	
+			padding-left: 10px;
+			padding-right: 10px;	
+		}
+	}
+
+	&__list{
+		padding-left: 0;
+		margin: 0 !important;
+		width: 100%;
+	}
+
+	&__item{
+		width: 100%;
+		position: relative;
+		overflow: hidden; 
+		height: 100% !important;
+		@media (min-width: @screen-sm) {
+			width: 100%;
+			height: 325px !important;
+		}		
+		@media (min-width: @screen-lg) {
+			height: 500px !important;	
+		} 
+
+		img{
+			height: 100%;
+			min-height: 260px;
+			width: 100%;
+
+			@media (min-width: @screen-sm) {
+				min-height: @screen-sm;		
+				position:absolute;
+				margin:auto;
+				top:0;
+				bottom:0;
+				left:0;
+				right:0;
+				display: block;
+				}		
+			@media (min-width: @screen-lg) {
+
+			} 
+		}
+	}
+
+	&__thumb-list{
+		padding-left: 0;
+		margin-bottom: 0 !important; 
+		width: 100%;
+		height: 100%;
+		font-size: 0;  
+		cursor: pointer; 		
+		display: none !important;
+		
+		@media (min-width: @screen-sm) {
+			display: block !important;
+			width: 100%;
+		}		
+		@media (min-width: @screen-lg) {
+			width: 100%;		
+		}
+	}
+
+	&__thumb-item{
+		display: inline-block;
+		height: 75px !important;
+		width: 100%;
+		overflow: hidden;
+			
+		@media (min-width: @screen-lg) {
+			height: 115px !important;		
+		}
+
+		img{
+			height: 100%;
+			width: 100%;
+			margin: 0;
+		}
+	}
 }

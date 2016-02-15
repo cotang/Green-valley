@@ -1,141 +1,109 @@
-//@promo__slide-height:             431px;
-//@promo__tabs-height:       112px;
 
 .promo{
 	width: 100%;
-}
-.promo__wrapper-slides{
-	width: 100%;
-}
-.promo__slide{
-	display: none;
-}
-.promo__slide--active{
-	display: block;
-	height: 320px;
-	background-size: cover;
-	background-position: 0% 100%;
-	padding-top: 20px;
 
-	@media (min-width: @screen-sm) {
 
-	 }
- 	@media (min-width: @screen-lg) {
-		background-position: 50% 50%; 		
-		height: 430px;	
-		padding-top: 90px;
-	 }	
-}
-.promo__slide-inner{
-	padding-left: 0;
-	padding-right: 0;
+	&__pic-wrapper{
+		height: 320px;
+		background-size: cover;
+		background-position: 0% 100%;
+		padding-top: 20px;	
 
-	@media (min-width: @screen-sm) {
-		padding-left: @grid-gutter-width/2;   /* восстановление значения из variables.less */
-		padding-right: @grid-gutter-width/2;  /* восстановление значения из variables.less */
+		@media (min-width: @screen-sm) {
+
 		}
- 	@media (min-width: @screen-lg) {
-
-	}	
-}
-
-.promo__slide-title{
-	font-size: @font-accent;
-	font-family: @pt-serif-caption;
-	letter-spacing: @letter-spacing-15;
-	font-weight: @font-weight-regular;
-	background: #fff;
-	margin-top: 0;	
-	margin-bottom: 0;
-	text-align: center;
-	padding: 0 20px;
-
-	@media (min-width: @screen-sm) {
-		text-align: left;
-		font-size: @font-h1;
-		padding-left: 10px;	
-		margin-bottom: 25px;				
-	}
- 	@media (min-width: @screen-lg) {
-	
-	}	
-}
-.promo__slide-description{
-	margin: 0 auto;
-	font-size: @font-p;
-	font-family: @fira-sans;
-	background: #fff;
-	text-align: center;
-	padding: 10px 20px 0;
-
-	@media (min-width: @screen-sm) {
-		text-align: left;
-		font-size: @font-accent;
-		padding-left: 10px;		
-	}
- 	@media (min-width: @screen-lg) {
-	
-	}		
-}
-
-.promo__tabs{
-	padding: 0;
-	margin: 0 auto;
-	text-align: center;
-
-}
-.promo__tab{
-	position: relative;	
-	display: inline-block;
-	vertical-align: middle;
-	text-transform: uppercase;
-	font-size: @font-small;
-	font-family: @fira-sans;
-	letter-spacing: @letter-spacing-50;
-	margin-right: 20px;	
-	padding-top: 15px;
-	&:last-child {
-		margin-right: 0;
-	}
-
-	@media (min-width: @screen-sm) {
-		margin-right: 40px;	
-		&:last-child {
-			margin-right: 0;
+		@media (min-width: @screen-lg) {
+			background-position: 50% 50%; 		
+			height: 430px;	
+			padding-top: 90px;
 		}	
 	}
- 	@media (min-width: @screen-lg) {
-		padding-top: 40px;	
+
+	&__text-wrapper{
+		padding-left: 0;
+		padding-right: 0;
+		@media (min-width: @screen-sm) {
+			max-width: @screen-sm;
+			margin: @margin-centering;				
+			padding-left: 10px;
+			padding-right: 10px;
+			}
+		@media (min-width: @screen-lg) {
+			max-width: @screen-lg;
+			margin: @margin-centering;	
+			padding-left: 0;
+			padding-right: 0;	
+
+		}	
 	}
 
-	& a:hover{
-		color: @light-orange;
-		&:after{
-			content: '';
-			display: inline-block;
-			width: 30px;
-			height: 2px;
-			background-color: #ff7435;
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-			bottom: -5px;					
+	&__title{
+		font-size: @font-accent;
+		font-family: @pt-serif-caption;
+		letter-spacing: @letter-spacing-50;
+		font-weight: @font-weight-regular;
+		background: @white;	
+		margin-top: 0;	
+		margin-bottom: 0;
+		text-align: center;
+		padding: 0 20px;
+
+		@media (min-width: @screen-sm) {
+			text-align: left;
+			font-size: @font-h1;
+			padding-left: 10px;	
+			margin-bottom: 15px;
+			background: transparent;				
+		}
+		@media (min-width: @screen-lg) {
+			padding-left: 0;
+			padding-right: 0;	
+			width: 50%;	
+		}	
+
+		span{
+			@media (min-width: @screen-sm) {
+				background: @white;	
+				padding-left: 10px;		
+				padding-right: 10px;	
+			}
+		 	@media (min-width: @screen-lg) {
+				
+			}	
 		}
 	}
-}
-.promo__tab--active{
-	 a{
-		color: @light-orange;
-		&:after{
-			content: '';
-			display: inline-block;
-			width: 30px;
-			height: 2px;
-			background-color: #ff7435;
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-			bottom: -5px;
+	
+	&__description{
+		font-size: @font-p;
+		font-family: @fira-sans;
+		background: @white;		
+		text-align: center;
+		margin-top: 0;
+		padding: 10px 20px 0;
+
+		@media (min-width: @screen-sm) {
+			text-align: left;
+			font-size: @font-accent;
+			padding-left: 10px;	
+			background: transparent;	
+
 		}
-	}	
+		@media (min-width: @screen-lg) {
+			padding-left: 0;
+			padding-right: 0;		
+			width: 50%;		
+		}
+
+		span{
+			@media (min-width: @screen-sm) {
+				background: @white;	
+				padding-left: 10px;		
+				padding-right: 10px;	
+				display: inline-block;			
+			}
+			@media (min-width: @screen-lg) {
+			
+			}
+		}			
+	}
 }
