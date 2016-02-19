@@ -69,7 +69,8 @@ module.exports = function(grunt) {
     concat: {
       start: {
         src: [
-          // 'src/js/plugin.js',
+          'bower_components/jquery/dist/jquery.js',
+          'bower_components/slick-carousel/slick/slick.js',         
           'src/js/*.js'
         ],
         dest: 'build/js/script.js'

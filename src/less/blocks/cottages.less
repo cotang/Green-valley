@@ -1,6 +1,6 @@
 .cottages{
 	width: 100%;
-	background-color: @grey-lighter;
+	background-color: @grey-lightest;
 	text-align: center;	
 
 	&__inner{
@@ -11,13 +11,14 @@
 			padding-bottom: 50px;		
 		}	
 		@media (min-width: @screen-lg) {
+			padding-top: 45px;			
 			max-width: 780px;
 			margin: @margin-centering;			
 		}
 	}
 
 	&__title{
-		margin: 0 0 20px;
+		margin: 0;
 		font-size: @font-h2-3;
 		font-family: @pt-serif;
 		font-weight: @font-weight-regular;	
@@ -29,12 +30,16 @@
 		margin-top: 25px;
 		padding-top: 25px;
 		padding-bottom: 25px;
-		background-color: @white;	
+		background-color: @white;
+		border: 1px solid @grey-border;	
 
 		@media (min-width: @screen-sm) {
 			display: flex;
 			justify-content: space-between;		
 		}	
+		@media (min-width: @screen-lg) {
+			margin-top: 20px;			
+		}		
 	}
 
 	&__item{
@@ -57,26 +62,15 @@
 		}	
 	}
 
-	&__choise{
-		display: block;
-		width: 100%;
-		cursor: pointer;
-		opacity: 0.4;
+	&__input[type="radio"]{
+		display: none;
 
-		input{
-			display: none;
+
+		&:checked + label{
+			opacity: 1.0;
 		}
 
-		@media (min-width: @screen-sm) {
-			padding-top: 20px;		
-			padding-bottom: 20px;	
-		}
-	}	
-
-	&__choise--active{
-		opacity: 1;
-
-		span:before{
+		&:checked + label:before{
 			content: "";
 			display: block;
 			width: 17px;
@@ -91,40 +85,49 @@
 				left: 50%;
 				top: 50%;
 				transform: translate(-50%, 200%);			
-			}			
-		}	
+			}
+		}
+	}
+
+	&__choise{
+		display: block;
+		width: 100%;
+		cursor: pointer;
+		opacity: 0.4;
+		transition: opacity 0.3s ease;	
+
+		@media (min-width: @screen-sm) {
+			padding-top: 20px;		
+			padding-bottom: 20px;
+		}
 	}
 }
 
-.house-description{
-	padding-left: 0;
-	display: none;
- 	@media (min-width: @screen-sm) {
-		display: flex;	
-		justify-content: space-between;	
-		align-items: baseline;
-		margin-top: 25px;
-		margin-bottom: 0;
-		background-color: @white;
-		padding-top: 30px;
-		padding-bottom: 20px;
-		position: relative;
-	}	
 
-	&:before{
-		content: "";
-		display: block;
-		width: 25px;
-		height: 25px;
-		transform: rotate(45deg) translateX(-50%) ;
-		background-color: @white;
-		position: absolute;
-		top: 0;
-		left: 12.5%; /* значение должно меняться (прибавлять и отнимать по 25%) */
+.house-description{
+	display: none;
+	position: relative;
+
+	&__list{
+		padding-left: 0;
+		display: none;
+
+	 	@media (min-width: @screen-sm) {
+			display: flex;
+			flex-wrap: no-wrap;	
+			justify-content: space-between;	
+			align-items: baseline;
+			margin-top: 25px;
+			margin-bottom: 0;
+			background-color: @white;
+			padding-top: 30px;
+			padding-bottom: 15px;
+			border: 1px solid @grey-border;	
+		}	
 	}
 
 	&__item{
-		display: block;
+		display: inline-block;
 		padding: 0 30px;
 		width: 20%;
 		font-size: @font-small;
@@ -132,6 +135,13 @@
 		font-weight: @font-weight-medium;	
 		text-transform: uppercase;
 
+		&:before{
+			content: "";
+			display: block;
+			margin: @margin-centering;	
+			position: relative;
+			top: -10px;	
+		}
 		&:nth-child(1):before{
 			width: 43px;
 			height: 43px;
@@ -159,11 +169,41 @@
 		}
 	}
 
-	&__item:before{
+	&:before{
 		content: "";
 		display: block;
-		margin: @margin-centering;	
-		position: relative;
-		top: -10px;	
+		width: 24px;
+		height: 24px;
+		transform: rotate(45deg) translateX(-17px) ;		
+		border-left: 1px solid @grey-border;
+		border-top: 1px solid @grey-border;				
+		background-color: @white;
+		position: absolute;
+		top: 0;
 	}
+	// &:nth-child(1):before{
+	// 	left: 12.5%; 
+	// }
+	// &:nth-child(2):before{
+	// 	left: 37.5%; 
+	// }
+	// &:nth-child(3):before{
+	// 	left: 62.5%; 
+	// }
+	// &:nth-child(4):before{
+	// 	left: 87.5%; 
+	// }
+}
+
+#house-description--flagman:before{
+	left: 12.5%; 
+}
+#house-description--ozerny:before{
+	left: 37.5%; 
+}
+#house-description--olhovka:before{
+	left: 62.5%; 
+}
+#house-description--portovy:before{
+	left: 87.5%; 
 }

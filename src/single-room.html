@@ -20,11 +20,15 @@
 				<span class="price-per-night">от <strong>3400</strong> руб./сутки</span>
 			</header>
 			<div class="room__info-wrapper">
-				<div class="room__slider">
-					<img src="img/singleroom-econom.jpg" alt=""  class="room_pic">
-					<a href="" class="arrow-left"></a>
-					<a href="" class="arrow-right"></a>
-					<a href="" class="room__loupe"></a>	
+				<div class="room__slider  single-item">
+					<div class="room__slider-item">
+						<img src="img/singleroom-econom.jpg" alt=""  class="room__pic">
+						<a href="img/singleroom-econom.jpg" class="room__loupe  fancybox"></a>	
+					</div>
+					<div class="room__slider-item">
+						<img src="img/singleroom-econom2.jpg" alt=""  class="room__pic">
+						<a href="img/singleroom-econom2.jpg" class="room__loupe  fancybox"></a>	
+					</div>					
 				</div>  
 				<div class="room__text-wrapper">		
 					<div class="room__about">
@@ -94,7 +98,7 @@
 
 
 	@@include('_html_inc/page_footer.html')
-
+	@@include('_html_inc/page_bottom.html')
 
 </body>
 </html>

@@ -23,7 +23,7 @@
 		padding: 0;
 		margin-right: 20px;
 		margin-left: 20px;
-		border: 1px solid rgba(0,0,0,.08);
+		border: 1px solid @grey-border;
 		font-size: 0;
 		position: relative;
 
@@ -38,7 +38,7 @@
 		display: block;
 		width: 1px;
 		height: 70%;
-		background-color: rgba(0,0,0,.08);
+		background-color: @grey-border;
 		position: absolute;
 		left: 50%;
 		top: 50%;
@@ -71,28 +71,28 @@
 		display: block;
 		cursor: pointer;
 		padding-bottom: 100px;
-		input{
+
+		input[type="radio"]{
 			display: none;
-		}
+
+			&:checked + .residence__item-name:after{
+				opacity: 1.0;
+			}
+
+			&:checked + .residence__item-name:before{
+				content: "";
+				display: block;
+				width: 17px;
+				height: 12px;
+				background: url(../../img/form-check.png) no-repeat;	
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 130px;
+			}
+		}			
 	}
 
-	&__choise--active{
-
-		.residence__item-name:after{
-			opacity: 1.0;			
-		}
-		.residence__item-name:before{
-			content: "";
-			display: block;
-			width: 17px;
-			height: 12px;
-			background: url(../../img/form-check.png) no-repeat;	
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-			top: 130px;
-		}
-	}
 
 	&__item-name{
 		display: block;
@@ -107,5 +107,6 @@
 		transform: translateX(-50%);
 		top: 50px;
 		opacity: 0.4;
+		transition: opacity 0.5s ease;		
 	}
 }

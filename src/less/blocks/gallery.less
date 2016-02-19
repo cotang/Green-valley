@@ -38,25 +38,76 @@
 			height: 500px !important;	
 		} 
 
-		img{
-			height: 100%;
-			min-height: 260px;
-			width: 100%;
-
-			@media (min-width: @screen-sm) {
-				min-height: @screen-sm;		
-				position:absolute;
-				margin:auto;
-				top:0;
-				bottom:0;
-				left:0;
-				right:0;
-				display: block;
-				}		
-			@media (min-width: @screen-lg) {
-
-			} 
+		&:hover .gallery__item-text{
+			bottom: 0;
 		}
+	}
+
+	&__pic{
+		height: 100%;
+		min-height: 260px;
+		width: 100%;
+
+		@media (min-width: @screen-sm) {
+			height: auto;
+			min-height: auto;		
+			position:absolute;
+			margin:auto;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			display: block;
+		}		
+	}
+
+	&__item-text{
+		display: none;
+
+		@media (min-width: @screen-lg) {
+			height: 100px;
+			width: 100%;	
+			position:absolute;
+			bottom: -100px;
+			left:0;
+			display: flex;
+			wrap: no-wrap;
+			align-items: center;
+			background-color: rgba(0,0,0,.65);			
+			color: @white;
+			transition: bottom 0.5s ease;
+		}		
+	}
+	&__item-title{
+		@media (min-width: @screen-lg) {
+			text-align: left;
+			padding: 0 30px 0 20px;
+			width: 600px;	
+			font-size: @font-h2-2;
+			font-family: @pt-serif-caption;
+			letter-spacing: @letter-spacing-50;		
+		}		
+	}
+	&__item-description{
+		@media (min-width: @screen-lg) {
+			display: inline-block;
+			text-align: left;
+			font-size: @font-p;
+			font-family: @fira-sans;
+		}		
+	}
+	&__item-look{
+		@media (min-width: @screen-lg) {
+			line-height: 100px;		
+			padding: 0 45px;
+			text-transform: uppercase;	
+			background-color: rgba(10,184,157,.65);
+			font-size: @font-small;
+			font-family: @fira-sans;
+			font-weight: @font-weight-medium;			
+			letter-spacing: @letter-spacing-50;	
+			cursor: pointer;	
+		}		
 	}
 
 	&__thumb-list{
@@ -82,15 +133,31 @@
 		height: 75px !important;
 		width: 100%;
 		overflow: hidden;
-			
+		position: relative;
+
+		&:after{
+			content: '';
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top:0;
+			left:0;
+			background-color: rgba(0,0,0,.4);
+			transition: all ease 0.5s;
+		}
+
+		&:hover:after{
+			background-color: transparent;
+		}
+
 		@media (min-width: @screen-lg) {
 			height: 115px !important;		
 		}
+	}
 
-		img{
-			height: 100%;
-			width: 100%;
-			margin: 0;
-		}
+	&__thumb-pic{
+		height: 100%;
+		width: 100%;
+		margin: 0;
 	}
 }

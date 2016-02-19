@@ -2,7 +2,7 @@
 
 .btn{
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: baseline;
 	text-align: center;
 	padding: 9px 18px 7px;
 	background-color: @light-orange;
@@ -22,10 +22,13 @@
 .btn--icon-calendar:before{
 	content:'';
 	display: inline-block;	
-	background-image: url(../img/calendar-icon.png);
-	width: 13px;
+	vertical-align: baseline;
+	background-image: url(../img/svg/calendar.svg);
+	background-size: cover;
+	width: 14px;
 	height: 14px;
 	margin-right: 10px;
+	margin-bottom: -2px;
 }
 .btn--bordered{
 	padding: 7px 25px 5px;
@@ -70,24 +73,37 @@
 	}
 }
 
-.arrow-left{
+.arrow-left{ 
 	display: block;
+	background-color: transparent;
+	color: transparent;	
 	transform: rotate(-45deg)  translateY(-50%);
 	border-top: 2px solid white;
 	border-left: 2px solid white;
+	border-bottom: none;
+	border-right: none;
 	width: 25px;
 	height: 25px;
 	position: absolute;	
 	top: 50%;
+	z-index: 5;
+	outline: none;
 }
+
 .arrow-right{
 	display: block;
+	background-color: transparent;	
+	color: transparent;
 	transform: rotate(45deg)  translateY(-50%);
 	border-top: 2px solid white;
 	border-right: 2px solid white;
+	border-bottom: none;
+	border-left: none;	
 	width: 25px;
 	height: 25px;
 	position: absolute;	
 	top: 50%;
+	z-index: 5;	
+	outline: none;	
 }
 

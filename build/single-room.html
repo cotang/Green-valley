@@ -14,13 +14,13 @@
     <div class="container">
       <div class="page-header__inner  row">
         <div class="page-header__logo  col-xs-12  col-lg-2">
-          <a href="" class="logo-pic"  style="background-image: url(img/header-logo.png);"></a>
+          <a href="index.html" class="logo-pic"  style="background-image: url(img/header-logo.png);"></a>
         </div>
         <nav class="main-nav">
           <a href="" id="menu_trigger"  class="hamburger  hidden-lg"><span></span></a>
           <ul class="main-nav__list  col-lg-5  visible-lg-block">
             <li class="main-nav__item"><a href="roomlist.html" class="main-nav__link">Номера</a></li>
-            <li class="main-nav__item"><a href="" class="main-nav__link">Коттедж</a></li>
+            <li class="main-nav__item"><a href="single-room.html" class="main-nav__link">Коттедж</a></li>
             <li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
             <li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
             <li class="main-nav__item"><a href="index(2).html" class="main-nav__link">Контакты</a></li>
@@ -28,20 +28,20 @@
         </nav>
         <div class="page-header__contacts  col-lg-3  visible-lg-block"><strong>+7 812 777-55-88</strong><span>г.Санкт-Петербург, Приморское ш.600</span></div>
         <div class="page-header__button  col-lg-2  visible-lg-block">
-          <a href="" class="btn btn--icon-calendar">Забронировать</a>
+          <a href="form.html" class="btn btn--icon-calendar">Забронировать</a>
         </div>
       </div>
     </div>
+
+    <ul class="hamburger-opened" id="additional-menu">
+      <li class="hamburger-opened__item"><a href="roomlist.html" class="main-nav__link">Номера</a></li>
+      <li class="hamburger-opened__item"><a href="single-room.html" class="main-nav__link">Коттедж</a></li>
+      <li class="hamburger-opened__item"><a href="" class="main-nav__link">Ресторан</a></li>
+      <li class="hamburger-opened__item"><a href="" class="main-nav__link">Отдых</a></li>
+      <li class="hamburger-opened__item"><a href="" class="main-nav__link">Контакты</a></li>
+    </ul>
+
   </header>
-
-
-  <ul class="hamburger-opened">
-    <li class="hamburger-opened__item"><a href="roomlist.html" class="main-nav__link">Номера</a></li>
-    <li class="hamburger-opened__item"><a href="" class="main-nav__link">Коттедж</a></li>
-    <li class="hamburger-opened__item"><a href="" class="main-nav__link">Ресторан</a></li>
-    <li class="hamburger-opened__item"><a href="" class="main-nav__link">Отдых</a></li>
-    <li class="hamburger-opened__item"><a href="" class="main-nav__link">Контакты</a></li>
-  </ul>
 
 
 	<section class="room">
@@ -51,11 +51,15 @@
 				<span class="price-per-night">от <strong>3400</strong> руб./сутки</span>
 			</header>
 			<div class="room__info-wrapper">
-				<div class="room__slider">
-					<img src="img/singleroom-econom.jpg" alt=""  class="room_pic">
-					<a href="" class="arrow-left"></a>
-					<a href="" class="arrow-right"></a>
-					<a href="" class="room__loupe"></a>	
+				<div class="room__slider  single-item">
+					<div class="room__slider-item">
+						<img src="img/singleroom-econom.jpg" alt=""  class="room__pic">
+						<a href="img/singleroom-econom.jpg" class="room__loupe  fancybox"></a>	
+					</div>
+					<div class="room__slider-item">
+						<img src="img/singleroom-econom2.jpg" alt=""  class="room__pic">
+						<a href="img/singleroom-econom2.jpg" class="room__loupe  fancybox"></a>	
+					</div>					
 				</div>  
 				<div class="room__text-wrapper">		
 					<div class="room__about">
@@ -128,16 +132,18 @@
     <div class="page-footer__inner">
       <div class="page-footer__address"><p>г.Санкт-Петербург</p><p>Приморское ш. 600</p></div>
       <div class="page-footer__links">
-        <a href="" class="logo-pic" style="background-image: url(img/footer-logo.png);"></a>
+        <a href="index.html" class="logo-pic" style="background-image: url(img/footer-logo.png);"></a>
         <div class="social-media">
-          <a href=""  class="social-media__item"  style="background-image: url(img/footer-vk-green.png); width: 25px; height: 14px;"></a>
-          <a href=""  class="social-media__item"  style="background-image: url(img/footer-in-green.png); width: 21px; height: 20px;"></a>
-          <a href=""  class="social-media__item"  style="background-image: url(img/footer-fb-green.png); width: 20px; height: 20px;"></a>
+          <a href=""  class="social-media__item  social-media__item--vk"></a>
+          <a href=""  class="social-media__item  social-media__item--in"></a>
+          <a href=""  class="social-media__item  social-media__item--fb"></a>
         </div>
       </div>
       <div class="page-footer__contacts"><p>+7 812 777-55-88</p><p>info@greenvalley.ru</p></div>
     </div>
   </footer>
+	<script src="js/script.min.js"></script>
+
 
 
 </body>

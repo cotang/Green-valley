@@ -53,7 +53,7 @@
 	height: 50px;	
 	position: absolute;
 	top: 50%; 
-	right: 5%;
+	right: 20px;
 	transform: translateY(-50%);
 
 	span{
@@ -155,7 +155,7 @@
 		
 	}
  	@media (min-width: @screen-lg) {
-		display: none;			/* не должно изменяться скриптом */
+		display: none !important;			/* не должно изменяться скриптом */
 	}
 }
 .hamburger-opened__item{

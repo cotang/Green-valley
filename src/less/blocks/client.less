@@ -56,27 +56,37 @@
 			border: 1px solid rgba(0,0,0,.08);
 			text-transform: uppercase;
 			color: @grey;
+
+			&:focus::-webkit-input-placeholder{
+				color: transparent;					
+			}				
+			&:focus::placeholder{
+				color: transparent;					
+			}
+
+			&:valid{
+				color: @grey-darkest;
+
+				 + .client__check-icon{
+					display: block;
+				}
+			}
 		}
 	}
 
-	&__info-filled{
+	&__check-icon{
 
-		input{
-			color: @grey-darkest;
-		}
-		&:before{
-			content: "";
-			display: block;
-			width: 17px;
-			height: 12px;
-			background: url(../../img/form-check.png) no-repeat;	
-			position: absolute;
-			left: 20px;
-			top: 50%;
-			transform: translateY(-50%);
-		 	@media (min-width: @screen-sm) {
-				top: 45px;
-			}
+		display: none;
+		width: 17px;
+		height: 12px;
+		background: url(../../img/form-check.png) no-repeat;	
+		position: absolute;
+		left: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+
+	 	@media (min-width: @screen-sm) {
+			top: 45px;
 		}
 	}
 
