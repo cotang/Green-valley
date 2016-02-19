@@ -931,6 +931,48 @@ img {
 	color: #ff7435;
 }
 
+.main-nav__link--underline {
+	position: relative;
+}
+
+.main-nav__link--underline:before {
+	content: '';
+	display: inline-block;
+	width: 30px;
+	height: 2px;
+	background-color: #ff7435;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translate(-50%);
+	transform: translate(-50%);
+	bottom: -5px;
+}
+
+.main-nav__link--underline-double {
+	position: relative;
+}
+
+.main-nav__link--underline-double:before,
+.main-nav__link--underline-double:after {
+	content: '';
+	display: inline-block;
+	width: 30px;
+	height: 2px;
+	background-color: #ff7435;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translate(-50%);
+	transform: translate(-50%);
+}
+
+.main-nav__link--underline-double:before {
+	bottom: -5px;
+}
+
+.main-nav__link--underline-double:after {
+	bottom: -10px;
+}
+
 .hamburger {
 	display: inline-block;
 	width: 50px;
@@ -972,8 +1014,6 @@ img {
 	-webkit-transform: translateY(150%);
 	transform: translateY(150%);
 }
-
-/* Подчеркивание ссылок меню */
 
 .page-header__contacts strong {
 	display: block;
