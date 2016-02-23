@@ -25,32 +25,64 @@ $(document).ready(function(){
     focusOnSelect: true
   });
 
+      // Review slick
+  // if ($(window).width() > 1200) {
+  //   $('.multiple-items').slick({
+  //       infinite: true,
+  //       slidesToShow: 2,
+  //       slidesToScroll: 2
+  //   });
+  // }
 
-    // Review slick
-  $('.multiple-items').slick({
-    infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 2
-    // speed: 500,           
-    // fade: true,
-    // variableWidth: true,
-    // cssEase: 'linear'
+
+
+$('.responsive').slick({
+  dots: false,
+  infinite: true,
+  
+  speed: 400,
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+      // slidesToShow: 2,
+      // slidesToScroll: 2,        
+      unslick
+      }
+    }
+  ]
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // Single-room slick
+
+  $('.single-item').slick({
+    arrows: true,      
   });
 
+  $('.slick-prev').addClass('arrow-left');
+  $('.slick-next').addClass('arrow-right');
 
-    // Single-room slick
-
-    $('.single-item').slick({
-      arrows: true,      
-    });
-
-    $('.slick-prev').addClass('arrow-left');
-    $('.slick-next').addClass('arrow-right');
-
-    $(".fancybox").fancybox({
-      padding: 0,
-      closeBtn: true,
-    });
+  $(".fancybox").fancybox({
+    padding: 0,
+    closeBtn: true,
+  });
 
 
 
@@ -114,6 +146,9 @@ $(document).ready(function(){
   });  
 
 
+
+
+
     // Form - card-info - enabled/disabled - jquery
   $('#now').on('click', function() {  
     $('.card-info__input').prop( "disabled", false ); 
@@ -123,17 +158,6 @@ $(document).ready(function(){
   $("input[name=pay]").not("#now").on('click', function() {    
     $('.card-info__input').prop( "disabled", true ); 
   }); 
-
-
-
-
-
-    // Form - house description - tabs - jquery
-  // $('input #flagman').on('click', function(e){
-  //   e.preventDefault();
-  //   $(.house-description).hide();    
-  //   $(.house-description--flagman).show();
-
 
 
 

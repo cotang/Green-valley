@@ -13,7 +13,6 @@
 	@@include('_html_inc/page_header.html')
 
 
-
 	<section class="reservation">
 		<div class="reservation__inner">
 			<h2 class="reservation__title">Бронирование</h2>
@@ -33,17 +32,17 @@
 					<li class="stay-period__date-item">
 						Дата въезда
 						<div class="stay-period__date">
-							<label><input type="text"  id="arrival-day"  maxlenght="2"  placeholder="ДД"></label> 
-							<label><input type="text"  id="arrival-month"  maxlenght="2"  placeholder="ММ"></label> 
-							<label><input type="text"  id="arrival-year"  maxlenght="4"  placeholder="ГГГГ"></label>
+							<label><input type="text"  id="arrival-day"  maxlenght="2"  placeholder="ДД"  required></label> 
+							<label><input type="text"  id="arrival-month"  maxlenght="2"  placeholder="ММ"  required></label> 
+							<label><input type="text"  id="arrival-year"  maxlenght="4"  placeholder="ГГГГ"  required></label>
 						</div>
 					</li>
 					<li class="stay-period__date-item">	
 						Дата выезда
 						<div class="stay-period__date">
-							<label><input type="text"  id="departure-day"  maxlenght="2"  placeholder="ДД"></label> 
-							<label><input type="text"  id="departure-month"  maxlenght="2"  placeholder="ММ"></label> 
-							<label><input type="text"  id="departure-year"  maxlenght="4"  placeholder="ГГГГ"></label>
+							<label><input type="text"  id="departure-day"  maxlenght="2"  placeholder="ДД"  required></label> 
+							<label><input type="text"  id="departure-month"  maxlenght="2"  placeholder="ММ"  required></label> 
+							<label><input type="text"  id="departure-year"  maxlenght="4"  placeholder="ГГГГ"  required></label>
 						</div>
 					</li>												
 				</ul>
@@ -141,22 +140,22 @@
 				<h2 class="client__title">Персональная информация</h2>
 				<div class="client__info--wrapper">
 					<label class="client__info  client__info-filled">
-						<input type="text" name="name" placeholder="Имя">
+						<input type="text" name="name" placeholder="Имя" required>
 						<span class="client__check-icon"></span>
 					</label>
 					<label class="client__info">
-						<input type="text" name="surname" placeholder="Фамилия">
+						<input type="text" name="surname" placeholder="Фамилия" required>
 						<span class="client__check-icon"></span>						
 					</label>
 				</div>
 				<div class="client__info--wrapper">
 					<label class="client__info">
-						<input type="tel" name="telephone" placeholder="Номер телефона">
+						<input type="tel" name="telephone" placeholder="Номер телефона" required>
 						<span class="client__check-icon"></span>						
 						<div class="client__clarification">Мы свяжемся с вами в случае необходимости.</div>			
 					</label>
 					<label class="client__info">
-						<input type="email" name="email" placeholder="E-mail">
+						<input type="email" name="email" placeholder="E-mail" required>
 						<span class="client__check-icon"></span>						
 						<div class="client__clarification">На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>							
 					</label>
@@ -186,24 +185,26 @@
 							</label>							
 							<div class="card-info">
 								<div class="card-info__wrapper">
-									<label class="card-info__field">
-										<span>Номер карты</span>
-										<input type="text" class="card-info__input" name="card-number" placeholder="0000-0000-0000-0000">
-									</label>
-									<label class="card-info__field">
-										<span>Фамилия владельца карты</span>
-										<input type="text" class="card-info__input" name="card-holder" placeholder="VLADIMIR VLADIMIROV">
-									</label>
+									<div class="card-info__field">
+										<label for="card-number">Номер карты</label>
+										<input type="text" class="card-info__input" name="card-number" id="card-number" placeholder="0000-0000-0000-0000">
+									</div>
+									<div class="card-info__field">
+										<label for="card-holder">Фамилия владельца карты</label>
+										<input type="text" class="card-info__input" name="card-holder" id="card-holder" placeholder="VLADIMIR VLADIMIROV">
+									</div>
 								</div>
-								<div class="card-info__wrapper--short">								
-									<label class="card-info__field  card-info__field--short">
-										<span>Код CVV</span>
+								<div class="card-info__wrapper  card-info__wrapper--short">							
+									<div class="card-info__field  card-info__field--short">
+										<div class="card-info__pic-q"></div>
+										<div class="card-info__prompt">Подсказка о CVV</div>
+										<label for="cvv-code">Код CVV</label>
 										<input type="text" class="card-info__input" name="cvv-code" id="cvv-code" placeholder="123">
-									</label>
-									<label class="card-info__field  card-info__field--short">
-										<span>Действует до</span>
-										<input type="text" class="card-info__input" name="valid-until" placeholder="01/2018">
-									</label>
+									</div>
+									<div class="card-info__field  card-info__field--short">
+										<label for="valid-until">Действует до</label>
+										<input type="text" class="card-info__input" name="valid-until" id="valid-until" placeholder="01/2018">
+									</div>
 								</div>
 							</div>
 						</div>
@@ -219,7 +220,7 @@
 					</div>
 				</div>
 				<div class="payment__button">
-					<button class="btn  btn--green  btn--wide">Забронировать</button>
+					<button type="submit" class="btn  btn--green  btn--wide">Забронировать</button>
 				</div>	
 			</div>			
 		</section>

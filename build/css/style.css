@@ -1444,7 +1444,7 @@ img {
 
 .review__slide {
 	position: relative;
-	display: inline-block;
+	display: block;
 	margin: 0;
 	width: 100%;
 	background-color: #fff;
@@ -1583,10 +1583,14 @@ img {
 }
 
 .location__map {
-	width: 100%;
-	height: 400px;
 	margin: 0 auto;
 	margin-top: 35px;
+	width: 100%;
+}
+
+.location__map iframe {
+	width: 100%;
+	height: 400px;
 }
 
 .transport {
@@ -2065,7 +2069,7 @@ img {
 
 .reservation__inner {
 	margin: 0 auto;
-	padding-top: 70px;
+	padding-top: 65px;
 	padding-bottom: 45px;
 	text-align: center;
 }
@@ -2110,12 +2114,12 @@ img {
 .stay-period__inner {
 	margin: 0 auto;
 	text-align: center;
-	padding-top: 40px;
+	padding-top: 45px;
 	padding-bottom: 20px;
 }
 
 .stay-period__title {
-	margin: 5px 0 20px;
+	margin: 0 0 25px;
 	font-size: 26px;
 	font-family: "PT Serif", "Times New Roman", Times, serif;
 	font-weight: 400;
@@ -2142,7 +2146,7 @@ img {
 
 .stay-period__date {
 	width: 180px;
-	padding-top: 10px;
+	padding-top: 15px;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
@@ -2308,7 +2312,7 @@ img {
 
 .cottages__inner {
 	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-bottom: 35px;
 }
 
 .cottages__title {
@@ -2428,16 +2432,7 @@ img {
 
 .house-description:before {
 	content: "";
-	display: block;
-	width: 24px;
-	height: 24px;
-	-webkit-transform: rotate(45deg) translateX(-17px);
-	transform: rotate(45deg) translateX(-17px);
-	border-left: 1px solid rgba(0, 0, 0, 0.08);
-	border-top: 1px solid rgba(0, 0, 0, 0.08);
-	background-color: #fff;
-	position: absolute;
-	top: 0;
+	display: none;
 }
 
 #house-description--flagman:before {
@@ -2537,6 +2532,7 @@ img {
 	width: 100%;
 	text-align: left;
 	margin-top: 10px;
+	line-height: 1.42857143em;
 }
 
 .payment {
@@ -2559,13 +2555,11 @@ img {
 }
 
 .payment__button {
-	margin: 40px 20px 60px;
+	margin: 50px 20px 50px;
 }
 
 .pay__later {
-	margin-bottom: 30px;
-	height: 100%;
-	border: 1px solid rgba(0, 0, 0, 0.08);
+	margin-bottom: 20px;
 }
 
 .pay__now {
@@ -2633,13 +2627,15 @@ img {
 	text-transform: uppercase;
 	text-align: left;
 	background-color: #fff;
+	position: relative;
 }
 
 .card-info__field {
 	display: block;
+	margin-top: 3px;
 }
 
-.card-info__field span {
+.card-info__field label {
 	display: block;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -2656,6 +2652,30 @@ img {
 
 .card-info__field--short {
 	padding-right: 50%;
+}
+
+.card-info__pic-q {
+	position: absolute;
+	top: 25px;
+	right: 40px;
+	width: 16px;
+	height: 17px;
+	background: url(../../img/form-q.png) no-repeat;
+}
+
+.card-info__pic-q:hover + .card-info__prompt {
+	display: inline-block;
+}
+
+.card-info__prompt {
+	text-transform: none;
+	display: none;
+	position: absolute;
+	top: 25px;
+	right: -120px;
+	padding: 10px 15px;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	background-color: #fff;
 }
 
 .bill {
@@ -3428,7 +3448,17 @@ img {
 	padding-top: 55px;
 }
 
+.review__carousel {
+	width: 520px;
+	height: 200%;
+}
+
 .review__slide {
+	width: 480px;
+	margin: 55px 20px 0;
+}
+
+.review__slide--shown {
 	width: 480px;
 	margin: 55px 20px 0;
 }
@@ -3610,6 +3640,10 @@ img {
 	width: 768px;
 }
 
+.stay-period__title {
+	margin-bottom: 20px;
+}
+
 .stay-period__date-list {
 	width: 380px;
 	display: -webkit-flex;
@@ -3622,6 +3656,7 @@ img {
 }
 
 .stay-period__date {
+	padding-top: 10px;
 	margin: 0;
 }
 
@@ -3690,10 +3725,28 @@ img {
 	border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+.house-description:before {
+	content: "";
+	display: block;
+	width: 24px;
+	height: 24px;
+	-webkit-transform: rotate(45deg) translateX(-17px);
+	transform: rotate(45deg) translateX(-17px);
+	border-left: 1px solid rgba(0, 0, 0, 0.08);
+	border-top: 1px solid rgba(0, 0, 0, 0.08);
+	background-color: #fff;
+	position: absolute;
+	top: 0;
+}
+
 .client__inner {
 	margin-right: 10px;
 	margin-left: 10px;
-	padding-bottom: 40px;
+	padding-bottom: 50px;
+}
+
+.client__title {
+	margin-bottom: 10px;
 }
 
 .client__info--wrapper {
@@ -3719,7 +3772,7 @@ img {
 }
 
 .payment__button {
-	margin: 40px 0px 60px;
+	margin: 50px 0px 50px;
 }
 
 .pay {
@@ -3730,11 +3783,17 @@ img {
 }
 
 .pay__wrapper {
-	width: 65%;
+	width: 63%;
 	-webkit-order: 1;
 	-ms-flex-order: 1;
 	order: 1;
 	margin-left: 10px;
+}
+
+.pay__later {
+	margin-bottom: 30px;
+	height: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .pay__text {
@@ -3771,7 +3830,7 @@ img {
 }
 
 .bill {
-	width: 35%;
+	width: 37%;
 	margin: 0 10px 0 0;
 }
 
@@ -4472,6 +4531,8 @@ td.visible-lg {
 }
 
 .review__carousel {
+	height: 100%;
+	width: 100%;
 	padding-left: 100px;
 	padding-right: 100px;
 }
@@ -4487,6 +4548,11 @@ td.visible-lg {
 }
 
 .review__slide {
+	width: 480px;
+	margin: 40px 10px 0;
+}
+
+.review__slide--shown {
 	width: 480px;
 	margin: 40px 10px 0;
 }
@@ -4651,7 +4717,6 @@ td.visible-lg {
 }
 
 .reservation__inner {
-	padding-top: 65px;
 	width: 1200px;
 }
 
@@ -4665,12 +4730,7 @@ td.visible-lg {
 
 .stay-period__inner {
 	width: 1200px;
-	padding-top: 45px;
 	padding-bottom: 100px;
-}
-
-.stay-period__title {
-	margin: 0 0 25px;
 }
 
 .stay-period__date-list {
@@ -4720,7 +4780,7 @@ td.visible-lg {
 }
 
 .payment__button {
-	margin: 30px 10px 45px;
+	margin: 50px 10px 50px;
 }
 
 .pay {

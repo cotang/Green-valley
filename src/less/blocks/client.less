@@ -11,7 +11,7 @@
 	 	@media (min-width: @screen-sm) {
 			margin-right: 10px;
 			margin-left: 10px;		
-			padding-bottom: 40px;		
+			padding-bottom: 50px;		
 		}	
 		@media (min-width: @screen-lg) {
 			max-width: 800px;
@@ -24,7 +24,11 @@
 		font-size: @font-h2-3;
 		font-family: @pt-serif;
 		font-weight: @font-weight-regular;	
-		letter-spacing: @letter-spacing-50;	
+		letter-spacing: @letter-spacing-50;
+	 	@media (min-width: @screen-sm) {
+			margin-bottom: 10px;
+		}
+
 	}
 
 	&__info--wrapper{
@@ -94,5 +98,6 @@
 		width: 100%;
 		text-align: left;
 		margin-top: 10px;
+		line-height: @line-height;
 	}
 }

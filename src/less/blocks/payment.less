@@ -22,13 +22,13 @@
 	}
 
 	&__button{
-		margin: 40px 20px 60px;
+		margin: 50px 20px 50px;
 
 		@media (min-width: @screen-sm) {
-			margin: 40px 0px 60px;	
+			margin: 50px 0px 50px;	
 			}
 		@media (min-width: @screen-lg) {
-			margin: 30px 10px 45px;
+			margin: 50px 10px 50px;
 		}			
 	}
 }
@@ -47,16 +47,20 @@
 	&__wrapper{
 
 		@media (min-width: @screen-sm) {
-			width: 65%;
+			width: 63%;
 			order: 1;
 			margin-left: 10px;
 		}		
 	}
 
 	&__later{
-		margin-bottom: 30px;
-		height: 100%;
-		border: 1px solid @grey-border;			
+		margin-bottom: 20px;
+
+		@media (min-width: @screen-sm) {
+			margin-bottom: 30px;
+			height: 100%;
+			border: 1px solid @grey-border;	
+		}					
 	}
 
 	&__now{
@@ -133,6 +137,7 @@
 	text-transform: uppercase;
 	text-align: left;	
 	background-color: @white;
+	position: relative;	
 
 	@media (min-width: @screen-sm) {
 		margin: 0;		
@@ -158,9 +163,11 @@
 	}
 
 	&__field{
+	
 		display: block;
+		margin-top: 3px;
 
-		span{
+		label{
 			display: block;
 			padding-top: 10px;
 			padding-bottom: 10px;
@@ -178,9 +185,32 @@
 
 	&__field--short{
 		padding-right: 50%;
+
 		@media (min-width: @screen-sm) {
 			padding-right: 0;
 		}	
+	}
+	&__pic-q{
+		position: absolute;
+		top: 25px;
+		right: 40px;
+		width: 16px;
+		height: 17px;
+		background: url(../../img/form-q.png) no-repeat;
+
+		&:hover + .card-info__prompt{
+			display: inline-block;
+		}
+	}	
+	&__prompt{
+		text-transform: none;
+		display: none;
+		position: absolute;
+		top: 25px;
+		right: -120px;
+		padding: 10px 15px;
+		border: 1px solid @grey-border;
+		background-color: @white;
 	}
 }
 
@@ -195,7 +225,7 @@
 	border: 1px solid @grey-border;	
 
 	@media (min-width: @screen-sm) {
-		width: 35%;
+		width: 37%;
 		margin: 0 10px 0 0;
 	}	
 

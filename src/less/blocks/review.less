@@ -42,7 +42,14 @@
 		margin: 0 auto 40px;	
 		position: relative;
 
+		@media (min-width: @screen-sm) {
+			width: 520px;	
+			height: 200%;		
+		}
+
 		@media (min-width: @screen-lg) {
+			height: 100%;
+			width: 100%;			
 			padding-left: 100px;
 			padding-right: 100px;
 		}
@@ -66,7 +73,7 @@
 
 	&__slide{
 		position: relative;	
-		display: inline-block;	
+		display: block;	
 		margin: 0;
 		width: 100%;
 		background-color: #fff;
@@ -84,8 +91,22 @@
 		@media (min-width: @screen-lg) {
 			width: 480px;			
 			margin: 40px 10px 0;
-		}		
-	}
+		}
+		
+		&--shown{
+			@media (min-width: @screen-sm) {
+				width: 480px;			
+				margin: 55px 20px 0;
+			}	
+			@media (min-width: @screen-lg) {
+				width: 480px;			
+				margin: 40px 10px 0;
+			}			
+		}
+
+
+
+	}	
 
 	&__slide-footer{
 
