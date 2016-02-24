@@ -1934,7 +1934,7 @@ img {
 
 .room__loupe {
 	display: none;
-	background: url(../../img/loupe.svg) no-repeat;
+	background: url(../img/loupe.svg) no-repeat;
 	position: absolute;
 	top: 20px;
 	right: 20px;
@@ -1981,7 +1981,7 @@ img {
 	width: 10px;
 	height: 10px;
 	display: inline-block;
-	background-image: url(../../img/svg/arrows.svg);
+	background-image: url(../img/svg/arrows.svg);
 	background-size: cover;
 	margin-right: 5px;
 }
@@ -2023,7 +2023,7 @@ img {
 	width: 10px;
 	height: 10px;
 	display: inline-block;
-	background-image: url(../../img/svg/arrows.svg);
+	background-image: url(../img/svg/arrows.svg);
 	background-size: cover;
 	margin-right: 5px;
 }
@@ -2251,13 +2251,13 @@ img {
 .residence__item:first-child .residence__item-name:after {
 	width: 82px;
 	height: 64px;
-	background: url(../../img/form-hotel.png) no-repeat;
+	background: url(../img/form-hotel.png) no-repeat;
 }
 
 .residence__item:last-child .residence__item-name:after {
 	width: 80px;
 	height: 62px;
-	background: url(../../img/form-cottage.png) no-repeat;
+	background: url(../img/form-cottage.png) no-repeat;
 }
 
 .residence__choise {
@@ -2279,7 +2279,7 @@ img {
 	display: block;
 	width: 17px;
 	height: 12px;
-	background: url(../../img/form-check.png) no-repeat;
+	background: url(../img/form-check.png) no-repeat;
 	position: absolute;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
@@ -2356,7 +2356,7 @@ img {
 	display: block;
 	width: 17px;
 	height: 12px;
-	background: url(../../img/form-check.png) no-repeat;
+	background: url(../img/form-check.png) no-repeat;
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -2403,31 +2403,31 @@ img {
 .house-description__item:nth-child(1):before {
 	width: 43px;
 	height: 43px;
-	background: url(../../img/form-square.png) no-repeat;
+	background: url(../img/form-square.png) no-repeat;
 }
 
 .house-description__item:nth-child(2):before {
 	width: 27px;
 	height: 43px;
-	background: url(../../img/form-rooms.png) no-repeat;
+	background: url(../img/form-rooms.png) no-repeat;
 }
 
 .house-description__item:nth-child(3):before {
 	width: 55px;
 	height: 43px;
-	background: url(../../img/form-beds.png) no-repeat;
+	background: url(../img/form-beds.png) no-repeat;
 }
 
 .house-description__item:nth-child(4):before {
 	width: 52px;
 	height: 28px;
-	background: url(../../img/form-bathroom.png) no-repeat;
+	background: url(../img/form-bathroom.png) no-repeat;
 }
 
 .house-description__item:nth-child(5):before {
 	width: 50px;
 	height: 42px;
-	background: url(../../img/form-wifi.png) no-repeat;
+	background: url(../img/form-wifi.png) no-repeat;
 }
 
 .house-description:before {
@@ -2520,7 +2520,7 @@ img {
 	display: none;
 	width: 17px;
 	height: 12px;
-	background: url(../../img/form-check.png) no-repeat;
+	background: url(../img/form-check.png) no-repeat;
 	position: absolute;
 	left: 20px;
 	top: 50%;
@@ -2586,7 +2586,7 @@ img {
 }
 
 .pay__choise input[type="radio"]:checked + .pay__title:before {
-	background: url(../../img/form-check.png) no-repeat;
+	background: url(../img/form-check.png) no-repeat;
 }
 
 .pay__title {
@@ -2605,7 +2605,7 @@ img {
 	display: block;
 	width: 17px;
 	height: 12px;
-	background: url(../../img/form-check-disabled.png) no-repeat;
+	background: url(../img/form-check-disabled.png) no-repeat;
 	position: absolute;
 	left: 20px;
 	top: 50%;
@@ -2660,7 +2660,7 @@ img {
 	right: 40px;
 	width: 16px;
 	height: 17px;
-	background: url(../../img/form-q.png) no-repeat;
+	background: url(../img/form-q.png) no-repeat;
 }
 
 .card-info__pic-q:hover + .card-info__prompt {
@@ -2714,7 +2714,7 @@ img {
 	display: inline-block;
 	width: 16px;
 	height: 12px;
-	background: url(../../img/form-warning.png) no-repeat;
+	background: url(../img/form-warning.png) no-repeat;
 }
 
 .dashed {

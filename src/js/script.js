@@ -35,11 +35,10 @@ $(document).ready(function(){
   // }
 
 
-
 $('.responsive').slick({
   dots: false,
   infinite: true,
-  
+  arrows: true,
   speed: 400,
   slidesToShow: 2,
   slidesToScroll: 2,
@@ -47,27 +46,13 @@ $('.responsive').slick({
     {
       breakpoint: 1200,
       settings: {
-      // slidesToShow: 2,
-      // slidesToScroll: 2,        
-      unslick
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1       
       }
     }
   ]
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   // Single-room slick
@@ -146,9 +131,6 @@ $('.responsive').slick({
   });  
 
 
-
-
-
     // Form - card-info - enabled/disabled - jquery
   $('#now').on('click', function() {  
     $('.card-info__input').prop( "disabled", false ); 
@@ -158,12 +140,6 @@ $('.responsive').slick({
   $("input[name=pay]").not("#now").on('click', function() {    
     $('.card-info__input').prop( "disabled", true ); 
   }); 
-
-
-
-
-
-
 
 
 
