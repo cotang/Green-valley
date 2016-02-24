@@ -61,16 +61,13 @@ $('.responsive').slick({
     arrows: true,      
   });
 
-  $('.slick-prev').addClass('arrow-left');
-  $('.slick-next').addClass('arrow-right');
+  // $('.slick-prev').addClass('arrow-left');
+  // $('.slick-next').addClass('arrow-right');
 
   $(".fancybox").fancybox({
     padding: 0,
     closeBtn: true,
   });
-
-
-
 
 
     // Hamburger - jquery
@@ -140,6 +137,13 @@ $('.responsive').slick({
   $("input[name=pay]").not("#now").on('click', function() {    
     $('.card-info__input').prop( "disabled", true ); 
   }); 
+
+
+    // Form - jquery-validate
+    // $("#main-form").validate();
+
+
+
 
 
 

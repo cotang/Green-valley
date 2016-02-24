@@ -52,7 +52,7 @@
 	</section>
 
 
-	<form action="">
+	<form id="main-form" action="">
 
 
 		<section class="stay-period">
@@ -63,17 +63,17 @@
 					<li class="stay-period__date-item">
 						Дата въезда
 						<div class="stay-period__date">
-							<label><input type="text"  id="arrival-day"  maxlenght="2"  placeholder="ДД"  required></label> 
-							<label><input type="text"  id="arrival-month"  maxlenght="2"  placeholder="ММ"  required></label> 
-							<label><input type="text"  id="arrival-year"  maxlenght="4"  placeholder="ГГГГ"  required></label>
+							<label><input type="number"  id="arrival-day"  min="1" max="31"  placeholder="ДД"  required></label> 
+							<label><input type="number"  id="arrival-month"  min="1" max="12"  placeholder="ММ"  required></label> 
+							<label><input type="number"  id="arrival-year"  min="2015" max="2030"  placeholder="ГГГГ"  required></label>
 						</div>
 					</li>
 					<li class="stay-period__date-item">	
 						Дата выезда
 						<div class="stay-period__date">
-							<label><input type="text"  id="departure-day"  maxlenght="2"  placeholder="ДД"  required></label> 
-							<label><input type="text"  id="departure-month"  maxlenght="2"  placeholder="ММ"  required></label> 
-							<label><input type="text"  id="departure-year"  maxlenght="4"  placeholder="ГГГГ"  required></label>
+							<label><input type="number"  id="departure-day"  min="1" max="31"  placeholder="ДД"  required></label> 
+							<label><input type="number"  id="departure-month"  min="1" max="12"  placeholder="ММ"  required></label> 
+							<label><input type="number"  id="departure-year"  min="2015" max="2030"  placeholder="ГГГГ"  required></label>
 						</div>
 					</li>												
 				</ul>
@@ -218,7 +218,7 @@
 								<div class="card-info__wrapper">
 									<div class="card-info__field">
 										<label for="card-number">Номер карты</label>
-										<input type="text" class="card-info__input" name="card-number" id="card-number" placeholder="0000-0000-0000-0000">
+										<input type="text" class="card-info__input" name="card-number" maxlength="16" id="card-number" placeholder="0000-0000-0000-0000">
 									</div>
 									<div class="card-info__field">
 										<label for="card-holder">Фамилия владельца карты</label>
@@ -230,11 +230,11 @@
 										<div class="card-info__pic-q"></div>
 										<div class="card-info__prompt">Подсказка о CVV</div>
 										<label for="cvv-code">Код CVV</label>
-										<input type="text" class="card-info__input" name="cvv-code" id="cvv-code" placeholder="123">
+										<input type="text" class="card-info__input" name="cvv-code" maxlength="3" id="cvv-code" placeholder="123">
 									</div>
 									<div class="card-info__field  card-info__field--short">
 										<label for="valid-until">Действует до</label>
-										<input type="text" class="card-info__input" name="valid-until" id="valid-until" placeholder="01/2018">
+										<input type="text" class="card-info__input" name="valid-until" maxlength="7" id="valid-until" placeholder="01/2018">
 									</div>
 								</div>
 							</div>
@@ -275,6 +275,7 @@
     </div>
   </footer>
 	<script src="js/script.min.js"></script>
+
 
 
 
