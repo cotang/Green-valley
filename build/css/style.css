@@ -2058,7 +2058,6 @@ img {
 
 .other-rooms__pic {
 	width: 100%;
-	height: 100%;
 	min-height: 200px;
 	margin-bottom: 30px;
 }
@@ -3530,7 +3529,7 @@ img {
 }
 
 .accomodation__pic {
-	height: 100%;
+	height: auto;
 }
 
 .page-footer__inner {
@@ -3812,7 +3811,6 @@ img {
 
 .pay__later {
 	margin-bottom: 30px;
-	height: 100%;
 	border: 1px solid rgba(0, 0, 0, 0.08);
 }
 

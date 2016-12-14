@@ -185,10 +185,17 @@ module.exports = function(grunt) {
           }
         }
       }
-    }
+    },
+
+    // публикация на gh-pages
+    'gh-pages': {
+        options: {
+          base: 'build'
+        },
+        src: ['**']
+    }    
 
   });
-
 
 
   // задача по умолчанию
@@ -198,6 +205,7 @@ module.exports = function(grunt) {
     'img',
     'includereplace:html',
     'browserSync',
+    'gh-pages',    
     'watch'
   ]);
 
